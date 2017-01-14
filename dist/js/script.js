@@ -1,26 +1,30 @@
-console.log('hey');
-$(function(){
+// code pour l'initialisation
+// # calcul taille fenetre 
+// # loading
 
-  var controller = new ScrollMagic.Controller({vertical: false});
+var windowWidth,
+windowHeight;
 
-  //mon animation que je vais linker plus tard
-  var animation = TweenMax.to(".monTexte", 1, {
-    rotation:360, y:100
-  }, 0.5)
+var updateWindow = function(){
+	windowHeight = window.innerHeight;
+	windowWidth = window.innerWidth;
+	
+	var $entranceContainer = $('.usa-entrance-container');
 
-  var scene = new ScrollMagic.Scene({
-    triggerElement: "#scene",
-    duration: 300 // 300px
-  })
+	$entranceContainer.css('width', windowWidth+'px');
+	$entranceContainer.css('height', windowHeight+'px');
+	
+	console.log("nouvelle height = " +windowHeight+"px");
+	console.log("nouvelle width = " +windowWidth+"px");
+}
 
-  .on('start', function(){
-    // console.log("c'est le début")
-  })
-  .on('end', function(event){
-    // console.log("c'est la fin")
-  })
-  .setTween(animation) // link l'animation
-  .addTo(controller) // link le controller
-  .addIndicators(); // ajoute les indicateurs pour noobs
 
-  });
+$(document).ready(function(){
+	updateWindow();
+	
+	$(window).resize(function(){
+		updateWindow();
+	})
+})
+
+// code pour l'entrée de l'experience
