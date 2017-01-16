@@ -1,51 +1,3 @@
-.use-body {
-	width: 3000px;
-	height: 100%;
-	background: url('../img/background.png');
-	position: relative;
-}
-
-
-/* global */
-
-.use-global-container {
-	width: 3000px;
-	// height: 600px;
-	position: absolute;
-	overflow: hidden;
-}
-
-.use-global-crowd {
-	position: absolute;
-	bottom: 0;
-}
-
-/* entrance */
-
-#use-entrance-container {
-	background: url('../img/entrance-texture.png');
-	width: 1300px;
-	height: 100%;
-}
-
-.use-entrance-texture-flag {
-	position: absolute;
-	left: 700px;
-
-}
-
-.use-entrance-trump {
-	position: absolute;
-	left: 100px;
-	bottom: -260px;
-}
-
-.use-entrance-clinton {
-	position: absolute;
-	left: 500px;
-	bottom: 0px;
-}
-
 /* Entrance */
 .usa-entrance-container {
 	position: relative;
@@ -80,6 +32,7 @@
 			.usa-entrance-bcgTexture {
 				background: url('../../dist/img/entrance-texture.png') no-repeat;
 				height: 100%;
+				background-size: cover;
 				.usa-entrance-bcgTexture-flag {
 					background: url('../../dist/img/entrance-flag.png') no-repeat;
 					position: absolute;
