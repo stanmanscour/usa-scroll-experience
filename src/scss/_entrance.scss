@@ -1,102 +1,92 @@
-/* Entrance */
-.usa-entrance-container {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	.usa-entrance-descript {
-		opacity: 0;
-		position: relative;
-		z-index: 30;
-		text-align: center;
-		height: 100%;
-		width: 100%;
-		.usa-container-blockTxt {
-			margin: 0 auto;
-			width: 400px;
-			height: 100%;
-			.usa-entrance-title {
-				position: absolute;
-				top: 15%;
-				width: 400px;
-				h1 {
-					font-size: 2.5rem;
-					text-transform: uppercase;
-				}
-			}
-			.usa-entrance-descriptionTitle {
-				position: absolute;
-				top: 20%;
-				width: 400px;
-				p {
-					text-transform: uppercase;
-				}
-			}
-			.usa-entrance-scrollAction {
-				position: absolute;
-				bottom: 5%;
-				width: 400px;
-				z-index: 51;
-				p{
-					text-transform: uppercase;
-				}
-			}
-		}
-	}
-	.usa-entrance-img {
-		z-index: 2;
-		width: 100%;
-		height: 100%;
-		position: absolute;
+// ---------- GENERAL STYLES ---------- //
 
-		.usa-entrance-bcg {
-			height: 100%;
-			.usa-entrance-bcgFoule {
-				opacity: 0;
-				background: url('../../dist/img/audit.png') no-repeat;
-				width: 100%;
-				height: 100%;
-				position: fixed;
-				bottom: -40%;
-				z-index: 50;
-			}
-			.usa-entrance-bcgTexture {
-				background: url('../../dist/img/entrance-texture.png') no-repeat;
-				height: 100%;
-				background-size: cover;
-				opacity: 0;
-				.usa-entrance-bcgTexture-flag {
-					background: url('../../dist/img/entrance-flag.png') no-repeat;
-					position: absolute;
-					right: -45%;
-					height: 100%;
-					width: 100%;
-					z-index: 1;
-					opacity: 0;
-				}
-			}
-		}
-		.usa-entrance-candidat {
-			height: 100%;
-			width: 100%;
-			.usa-entrance-candidatTrump {
-				background: url('../../dist/img/entrance-trump.png') no-repeat;
-				background-size: 100%;
-				width: 40%;
-				height: 100%;
-				position: absolute;
-				bottom: -150%;
-				left: 20%;
-			}
-			.usa-entrance-candidatClinton {
-				background: url('../../dist/img/entrance-clinton.png') no-repeat;
-				background-size: 100%;
-				width: 35%;
-				height: 100%;
-				position: absolute;
-				bottom: -157%;
-				right: 20%;
-				z-index: 10;
-			}
-		}
-	}
+* {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Fauna One', serif;
+}
+body, 
+html {
+	height: 100%
+}
+
+
+// ---------- SCROLLING STYLES ---------- //
+
+$panelcount: 5; // set # of panels/sections here
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: 1000;
+}
+
+.section {
+  & {
+    height: 100%;
+    width: calc( 100% / #{$panelcount} );
+    float: left;
+
+    // aesthetic only ----
+    position: relative;
+    
+    $colors: #F64747, #22A7F0, #F9690E, #9B59B6, #03C9A9;
+    @for $i from 1 through length($colors) {
+      &:nth-child(#{$i}) {
+        background: nth($colors, $i)
+      }
+    }
+  }
+  &s {
+    width: percentage($panelcount);
+    height: 100%;
+  }
+  &__title {
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  &__button {
+    height: 40px;
+    width: 300px;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+  }
+}
+
+#section-2-id {
+  display: none;
+}
+
+.section-2-explications {
+  height: 2500px;
+ // overflow-y: scroll;
+}
+
+.stellios {
+  width: 100%;
+  background: blue;
+  height: 33.33%;
+}
+
+.hadrien {
+  width: 100%;
+  background: green;
+  height: 33.33%;
+}
+
+.quentin {
+  width: 100%;
+  background: rose;
+  height: 33.33%;
 }
