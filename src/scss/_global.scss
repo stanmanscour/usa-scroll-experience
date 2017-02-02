@@ -1,14 +1,14 @@
-body{
-	background-color: #fff;
-	color: white;
-	height: 100%;
-	width: 100%;
+* {
+  box-sizing: border-box;
 }
 
-#container {
-	background-color: black;
-	width: 1000%;
-	height: 100%;
-	position: absolute;	
-	overflow: hidden;
+body {
+	font-family: 'Fauna One', serif;
+	color: black;
+	background-color: #f5f5f5;
 }
+body, 
+html {
+	height: 100%
+}
+
