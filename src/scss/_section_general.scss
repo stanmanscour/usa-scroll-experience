@@ -1,46 +1,16 @@
-section {
-	.section_year {
-		position: absolute;
-		color: rgba(0, 0, 0, 0.3);
-		
-		top: 15%;
-		right: 20%;
-		font-size: 120px;
-	}
-	.section_mainImage img {
-		position: absolute;
-		bottom: 0;
-
-		width: 30%;
-	}
-	.section_bcgImage_1 {
-		position: absolute;
-		bottom: 20%;
-		right: 10%;
-
-	}
-	.section_title {
-		position: absolute;
-		top: 50%;
-		right: 30%;
-		
-		text-align: center;
-		text-transform: uppercase;
-		font-size: 32px;
-	}
-	.section_text {
-		position: absolute;
-		top: 55%;
-		right: 30%;
-
-		text-align: center;
-		width: 300px;
-		font-size: 22px;
-	}
-	.section_discover {
-		position: absolute;
-		bottom: 20%;
-		left: 45%;
-		text-align: center;
+.section {
+	width: 100%;
+	height: 100%;
+	.content {
+		width: 100%;
+		height: 100%;
+		.section_year {
+			position: absolute;
+			color: rgba(0, 0, 0, 0.1);
+			top: 10%;
+			right: 15%;
+			font-size: 120pt;
+			font-weight: 300;
+		}
 	}
 }

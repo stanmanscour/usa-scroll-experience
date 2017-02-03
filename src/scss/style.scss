@@ -1,23 +1,6 @@
 @import '_reset';
 @import '_global';
-@import '_entrance';
-@import '_menu_chronologie';
 @import '_section_general';
+@import '_entrance';
 
-#text1 {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-#text2 {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-#text3 {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
