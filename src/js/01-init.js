@@ -2,27 +2,27 @@
 // # calcul taille fenetre 
 // # loading
 
-// var windowWidth,
-// windowHeight;
+var windowWidth,
+windowHeight;
 
-// var updateWindow = function(){
-// 	windowHeight = window.innerHeight;
-// 	windowWidth = window.innerWidth;
+var updateWindow = function(){
+	windowHeight = window.innerHeight;
+	windowWidth = window.innerWidth;
 	
-// 	var $entranceContainer = $('.usa-entrance-container');
+	var $entranceContainer = $('.section_entrance');
 
-// 	$entranceContainer.css('width', windowWidth+'px');
-// 	$entranceContainer.css('height', windowHeight+'px');
+	$entranceContainer.css('width', windowWidth+'px');
+	$entranceContainer.css('height', windowHeight+'px');
 	
-// 	console.log("nouvelle height = " +windowHeight+"px");
-// 	console.log("nouvelle width = " +windowWidth+"px");
-// }
+	console.log("nouvelle height = " +windowHeight+"px");
+	console.log("nouvelle width = " +windowWidth+"px");
+}
 
 
-// $(document).ready(function(){
-// 	updateWindow();
+$(document).ready(function(){
+	updateWindow();
 	
-// 	$(window).resize(function(){
-// 		updateWindow();
-// 	})
-// })
+	$(window).resize(function(){
+		updateWindow();
+	})
+})

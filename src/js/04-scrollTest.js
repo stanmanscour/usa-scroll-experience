@@ -18,11 +18,11 @@ var updateWindow = function(){
   console.log("nouvelle width = " +windowWidth+"px");
 }
 
-
+$(document).ready(function(){
   $("body").mousewheel(function(event, delta) {
-		this.scrollLeft -= (delta * 30);
-		event.preventDefault();		
-	});
+    this.scrollLeft -= (delta * 2);
+    event.preventDefault();   
+  });
   
   console.log('init');
   updateWindow();
@@ -30,5 +30,7 @@ var updateWindow = function(){
   $(window).resize(function(){
     console.log("hey");
    updateWindow();
-  });
+ })
   
+})
+
