@@ -1,6 +1,20 @@
-// code pour l'initialisation
-// # calcul taille fenetre 
-// # loading
+$(function() {
+
+/*
+*
+* Append table
+*
+*/
+
+$("#container").wrapInner("<table cellspacing='30'><tr>");
+$(".section").wrap("<td>");
+
+
+/*
+*
+* Responsive
+*
+*/
 
 var windowWidth,
 windowHeight;
@@ -8,21 +22,36 @@ windowHeight;
 var updateWindow = function(){
 	windowHeight = window.innerHeight;
 	windowWidth = window.innerWidth;
-	
-	var $entranceContainer = $('.section_entrance');
 
-	$entranceContainer.css('width', windowWidth+'px');
-	$entranceContainer.css('height', windowHeight+'px');
-	
+	$('td').css('min-width', windowWidth+'px');
+	$('td').css('min-height', windowHeight+'px');
+	$('td').css('height', windowHeight+'px');
+
 	console.log("nouvelle height = " +windowHeight+"px");
 	console.log("nouvelle width = " +windowWidth+"px");
 }
 
+updateWindow();
 
-$(document).ready(function(){
+$(window).resize(function(){
+	console.log("hey");
 	updateWindow();
-	
-	$(window).resize(function(){
-		updateWindow();
-	})
 })
+
+/*
+*
+* Mouse scroll
+*
+*/
+
+$("body").mousewheel(function(event, delta) {
+	this.scrollLeft -= (delta * 2);
+	event.preventDefault();   
+});
+
+/*
+*
+*
+*/
+
+
