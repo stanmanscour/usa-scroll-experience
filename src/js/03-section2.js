@@ -20,11 +20,11 @@ var tween = new TimelineMax ()
 
     // build scene
     var scene = new ScrollMagic.Scene({triggerElement: ".section_two .content", duration: '100%', offset: 0})
-    .setTween(tween)
-            .addIndicators() // add indicators (requires plugin)
-            .addTo(controller_section2);
 
-        });
+    .setTween(tween)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller_section2);
+    });
 
 
 /* 
@@ -33,7 +33,7 @@ var tween = new TimelineMax ()
 *
 */
 
-function parallax(e, target, layer, a, b) {
+var parallax = function parallax(e, target, layer, a, b) {
         var x = target.homePos.x - (e.pageX - target.homePos.x) / layer;
         var y = target.homePos.y - (e.pageY - target.homePos.y) / layer;
     //$(target).offset({ top: y ,left : x });
@@ -76,11 +76,12 @@ $(function() {
 var $cat_title = $('.contratATerme_title');
 var $cat_intro = $('.contratATerme_intro');
 var $cat_clinton = $('.contratATerme_clinton img');
+var $cat_optClinton = $('.contratATerme_optionalClinton')
+// faire l'anim de ça î
 
 var tweenCatClinton = TweenMax.to($cat_clinton, 1, {
     opacity: "0",
     bottom: '-19%',
-    left: "10%",
     ease:Power1.easeInOut
 })
 tweenCatClinton.pause();
@@ -124,9 +125,21 @@ $(function(){
         // si c'est fermé -> ouvrir
         if (!cat_content_open){
 
+            let containerWidth = $('#container').width();
 
+            $('html, body').stop().animate({
 
+            // disponible une fois qu'on aura la taille du document
+            // scrollLeft: containerWidth * 13.2 / 100
+           }, 1000, function(){
             tl.play();
+            $("body").mousewheel(function(event, delta) {
+                this.scrollLeft -= (delta * 0);
+                event.preventDefault();   
+            });
+           })
+
+            
             // tweenCatClinton.play();
             // tweenCatTitle.play();
             // tweenCatTexts.play();
