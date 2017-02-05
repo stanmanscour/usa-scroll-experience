@@ -77,6 +77,8 @@ $(function(){
 
 
 
+
+
 /*
 *
 * Scroll magic
@@ -273,7 +275,6 @@ var tweenCatFunctionality = TweenMax.to($cat_MainFunctionality, 2, {
 })
  tweenCatFunctionality.pause();
 
-<<<<<<< HEAD
 var tweenCatFunctionalityEvent = TweenMax.to($cat_MainFunctionality_event, 0.8, {
     left: '50%',
     top: '50%',
@@ -298,12 +299,10 @@ $cat_MainFunctionality_event.click(function(){
         cat_MainFunctionality_open = false;
     }
 })
-=======
 /*
 *MENU CHRONOLOGIE
 *
 */
->>>>>>> 6a7e9a0193ff362954e74ca663916b39ec98a4f4
 
 var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOptions: {duration: '100%'}});
 
