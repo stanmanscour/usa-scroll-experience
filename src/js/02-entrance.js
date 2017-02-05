@@ -14,10 +14,10 @@ $(function(){
 	$start_clinton.homePos = { x: $start_clinton.css('right').split('px')[0], y: $start_clinton.css('bottom').split('px')[0] };
 	$start_trump.homePos = { x: $start_trump.css('right').split('px')[0], y: $start_trump.css('bottom').split('px')[0] };
 
-	$('.section_entrance').mousemove( function(e){
-		console.log($start_clinton.homePos)
-		parallax(e, $start_clinton, 45, 'right', 'bottom');
-		parallax(e, $start_trump, 35, 'right', 'bottom');
-	})
+	// $('.section_entrance').mousemove( function(e){
+	// 	console.log($start_clinton.homePos)
+	// 	parallax(e, $start_clinton, 45, 'right', 'bottom');
+	// 	parallax(e, $start_trump, 35, 'right', 'bottom');
+	// })
 })
 
