@@ -16,3 +16,17 @@ body{
 .absolute {
   position: absolute;
 }
+
+.basic_2links {
+  .upperText {
+    color: #838383;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 18px;
+  }
+  .simpleText {
+    font-size: 13px;
+    color: #010101;
+    line-height: 19px;
+  }
+}

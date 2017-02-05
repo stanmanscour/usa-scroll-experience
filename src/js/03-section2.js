@@ -1,3 +1,5 @@
+
+
 /*
 *
 * Scroll magic
@@ -114,8 +116,11 @@ tl.add('skew')
     .add(tweenCatSecondContent.play())
 tl.pause();
 
+var cat_MainFunctionality_open = true;
+
 
 $(function(){
+
 
     var cat_content_open = false;
     var $cat_content = $('.section_contentSecond');
@@ -132,7 +137,14 @@ $(function(){
             // disponible une fois qu'on aura la taille du document
             // scrollLeft: containerWidth * 13.2 / 100
            }, 1000, function(){
+
+            if (cat_MainFunctionality_open){
+                tweenCatFunctionality.play();
+                tweenCatFunctionalityEvent.play();
+                cat_MainFunctionality_open = false;
+            }
             tl.play();
+
             $("body").mousewheel(function(event, delta) {
                 this.scrollLeft -= (delta * 0);
                 event.preventDefault();   
@@ -170,43 +182,41 @@ $(function(){
 
 })
 
-// $(function () { // wait for document ready
 
 
-// $('.js-open-sectionDeux').on('click', function(){
-
-//   if (!sectionDeuxOpen){ /* si la section 2 est fermée */
-
-//     $('html, body').stop().animate({
-//       scrollTop: 3605 * 20 / 100
-//     }, 1000, function(){
-//       $('#section-2-id').css({
-//         'display': 'block',
-//         'height': '100%',
-//         'overflow-y': 'scroll',
-//         'background': 'yellow',
-//         'width': '60%',
-//         'position': 'absolute',
-//         'left': '50%',
-//         'transform': 'translate(-50%, 25%)'
-//       })
-//     });
-
-//     sectionDeuxOpen = true;
-
-//   } else { /* si la section 2 est ouverte */
-
-//    $('#section-2-id').css({
-//     'display': 'none',
-//     'background': 'blue'
-//   })
-
-//    sectionDeuxOpen = false;
-
-//  }
-
- 
-// })
-// });
 
 
+
+var $cat_MainFunctionality = $('.contratATerme_mainFunctionality'),
+    $cat_MainFunctionality_event = $('.contratATerme_mainFunctionality_event');
+
+var tweenCatFunctionality = TweenMax.to($cat_MainFunctionality, 2, {
+    opacity: 0,
+    ease:Power1.easeInOut
+})
+ tweenCatFunctionality.pause();
+
+var tweenCatFunctionalityEvent = TweenMax.to($cat_MainFunctionality_event, 0.8, {
+    left: '50%',
+    top: '50%',
+    ease:Power1.easeInOut
+})
+tweenCatFunctionalityEvent.pause();
+
+$cat_MainFunctionality_event.click(function(){
+    console.log('hey');
+    // si c'est fermé
+    if (!cat_MainFunctionality_open){
+        console.log('1');
+        tweenCatFunctionality.reverse();
+        tweenCatFunctionalityEvent.reverse();
+        cat_MainFunctionality_open = true;
+
+    // si c'est ouvert
+    } else {
+        console.log('2');
+        tweenCatFunctionality.play();
+        tweenCatFunctionalityEvent.play();
+        cat_MainFunctionality_open = false;
+    }
+})

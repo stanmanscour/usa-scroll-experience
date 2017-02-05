@@ -6,6 +6,43 @@
 				bottom: -10%;
 				left: 0%;
 			}
+			.section_mainFunctionality {
+				top: 56%;
+				z-index: 101;
+				right: 13%;
+				position: absolute;
+				width: 277px;
+				height: 160px;
+
+				.contratATerme_mainFunctionality_event {
+					position: absolute;
+					top: -40px;
+    				left: 0px;
+					height: 12px;
+					width: 12px;
+					border: 10px solid #ececec;
+					background: white;
+					// opacity: 0.8;
+					border-radius: 100%;
+					cursor: pointer;
+
+					&:hover {
+						box-shadow: 5px 6px 37px 0px rgba(0,0,0,.42)
+					}
+				}
+
+				.contratATerme_mainFunctionality {
+					//
+
+					img {
+						width: 100%;
+						height: 100%;
+					box-shadow: 5px 6px 37px 0px rgba(0,0,0,.42)
+					}
+				}
+				
+			}
+
 			.section_title {
 				left: 20%;
 			}
