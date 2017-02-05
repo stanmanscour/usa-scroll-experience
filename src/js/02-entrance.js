@@ -19,5 +19,9 @@ $(function(){
 	// 	parallax(e, $start_clinton, 45, 'right', 'bottom');
 	// 	parallax(e, $start_trump, 35, 'right', 'bottom');
 	// })
+
+  
 })
+
+
 

@@ -7,7 +7,7 @@ body{
 }
 
 #container {
-  width: 10000px;
+  width: 800%;
   height: 100%;
   position: absolute; 
   overflow: hidden;
@@ -15,4 +15,12 @@ body{
 
 .absolute {
   position: absolute;
+}
+
+.display {
+  display: block;
+}
+
+.hide {
+  display: none;
 }

@@ -48,10 +48,3 @@ $("body").mousewheel(function(event, delta) {
 	this.scrollLeft -= (delta * 2);
 	event.preventDefault();   
 });
-
-/*
-*
-*
-*/
-
-
