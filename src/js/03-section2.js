@@ -47,9 +47,11 @@ var $cat_year = $('.contratATerme_year'),
     $cat_background = $('.contratATerme_background img'),
     $cat_action = $('.js-contratATerme_action');
 
+var parallaxCatActionAuthorised = true;
+
 $(function() {
 
-    
+   
 
     $cat_year.homePos = { x: $cat_year.css('left').split('px')[0], y: $cat_year.css('top').split('px')[0] };
     $cat_background.homePos = { x: $cat_background.css('left').split('px')[0], y: $cat_background.css('top').split('px')[0] };
@@ -64,8 +66,11 @@ $(function() {
         // parallax(e, $cat_clinton_img, 25, 'left', 'bottom');
         // parallax(e, $cat_title, 40, 'left', 'top');
         // parallax(e, $cat_intro, 60, 'left', 'top');
-        parallax(e, $cat_action, 60, 'left', 'top');
 
+        if (parallaxCatActionAuthorised){
+            console.log(parallaxCatActionAuthorised);
+            parallax(e, $cat_action, 60, 'left', 'top');
+        }
     })
 })
 
@@ -78,8 +83,24 @@ $(function() {
 var $cat_title = $('.contratATerme_title');
 var $cat_intro = $('.contratATerme_intro');
 var $cat_clinton = $('.contratATerme_clinton img');
-var $cat_optClinton = $('.contratATerme_optionalClinton')
-// faire l'anim de ça î
+var $cat_optClinton = $('.contratATerme_optionalClinton');
+var $cat_MainFunctionality_Video = $('.contratATerme_mainFunctionality img');
+var $cat_MainFunctionality_Container = $('.section_mainFunctionality.contratATerme_gif');
+
+var tweenCatFunctionalityVideo = TweenMax.to($cat_MainFunctionality_Video, 1, {
+    css: {
+        scale: 1.3
+    },
+    ease:Quad.easeInOut
+})
+tweenCatFunctionalityVideo.pause();
+
+var tweenCatFunctionalityHide = TweenMax.to($cat_MainFunctionality_Container, 1, {
+    opacity: "0",
+    top: '35%',
+    ease:Power1.easeInOut
+})
+tweenCatFunctionalityHide.pause();
 
 var tweenCatClinton = TweenMax.to($cat_clinton, 1, {
     opacity: "0",
@@ -89,34 +110,67 @@ var tweenCatClinton = TweenMax.to($cat_clinton, 1, {
 tweenCatClinton.pause();
 
 var tweenCatTexts = TweenMax.to($cat_intro, 1, {
-    opacity: "0",
-    top: '24%',
+    //opacity: "0",
+    top: '10%',
+    left: '17%',
+    //width: '470px',
     ease:Power1.easeInOut
 })
 tweenCatTexts.pause();
 
 var tweenCatTitle = TweenMax.to($cat_title, 1, {
-    opacity: "0",
-    top: '20%',
+    //opacity: "0",
+    top: '6%',
+    left: '17%',
     ease:Power1.easeInOut,
-
 })
 tweenCatTitle.pause();
 
+var tweenCatTitleWidth = TweenMax.to($('#text1'), 1,{
+    width: '470px'
+})
+tweenCatTitleWidth.pause();
+
+var tweenCatAction = TweenMax.to( $cat_action, 0.8, {
+    top: '10%',
+    ease:Power1.easeInOut,
+    onComplete: function(){ }
+})
+tweenCatAction.pause();
+
+
 $cat_secondContent = $('.section_contentSecond');
 var tweenCatSecondContent = TweenMax.to($cat_secondContent, 2, {
-    bottom: '0%',
+    top: '20%',
     ease:Power1.easeInOut
 })
 tweenCatSecondContent.pause();
 
 var tl = new TimelineLite();
 tl.add('skew')
-    .add([tweenCatTexts.play(), tweenCatTitle.play(), tweenCatClinton.play()])
+    .add([
+        tweenCatTexts.play(),
+        tweenCatTitle.play(),
+        tweenCatTitleWidth.play(),
+        tweenCatClinton.play(),
+        tweenCatFunctionalityHide.play()
+    ])
+    .add(tweenCatAction.play())
     .add(tweenCatSecondContent.play())
 tl.pause();
 
-var cat_MainFunctionality_open = true;
+// var cat_MainFunctionality_open = true;
+
+
+
+$('.contratATerme_mainFunctionality').on('mouseover', function(){
+   tweenCatFunctionalityVideo.play();
+})
+
+$('.contratATerme_mainFunctionality').on('mouseout', function(){
+   tweenCatFunctionalityVideo.reverse();
+})
+
 
 
 $(function(){
@@ -127,49 +181,38 @@ $(function(){
 
     $cat_action.click(function(){
 
+
         // si c'est fermé -> ouvrir
         if (!cat_content_open){
 
             let containerWidth = $('#container').width();
-
+            parallaxCatActionAuthorised = false;
+            console.log(parallaxCatActionAuthorised)
             $('html, body').stop().animate({
 
             // disponible une fois qu'on aura la taille du document
             // scrollLeft: containerWidth * 13.2 / 100
            }, 1000, function(){
 
-            if (cat_MainFunctionality_open){
-                tweenCatFunctionality.play();
-                tweenCatFunctionalityEvent.play();
-                cat_MainFunctionality_open = false;
-            }
+            
             tl.play();
+            $('.js-contratATerme_action .upperText').html('Close');
+            $('.js-contratATerme_action .simpleText').html('Go to the timeline');
 
-            $("body").mousewheel(function(event, delta) {
-                this.scrollLeft -= (delta * 0);
-                event.preventDefault();   
-            });
            })
 
-            
-            // tweenCatClinton.play();
-            // tweenCatTitle.play();
-            // tweenCatTexts.play();
-
-
-            // animations
-            
-            
-
-            
             // cacher le menu
-
+            
             cat_content_open = true;
 
         // si c'est ouvert -> fermer
         } else {
 
-           tl.reverse();
+            tl.reverse();
+            $('.js-contratATerme_action .upperText').html('Learn More');
+            $('.js-contratATerme_action .simpleText').html('Visit cattle futures');
+
+           //parallaxCatActionAuthorised = true;
 
             //
 
@@ -182,41 +225,3 @@ $(function(){
 
 })
 
-
-
-
-
-
-var $cat_MainFunctionality = $('.contratATerme_mainFunctionality'),
-    $cat_MainFunctionality_event = $('.contratATerme_mainFunctionality_event');
-
-var tweenCatFunctionality = TweenMax.to($cat_MainFunctionality, 2, {
-    opacity: 0,
-    ease:Power1.easeInOut
-})
- tweenCatFunctionality.pause();
-
-var tweenCatFunctionalityEvent = TweenMax.to($cat_MainFunctionality_event, 0.8, {
-    left: '50%',
-    top: '50%',
-    ease:Power1.easeInOut
-})
-tweenCatFunctionalityEvent.pause();
-
-$cat_MainFunctionality_event.click(function(){
-    console.log('hey');
-    // si c'est fermé
-    if (!cat_MainFunctionality_open){
-        console.log('1');
-        tweenCatFunctionality.reverse();
-        tweenCatFunctionalityEvent.reverse();
-        cat_MainFunctionality_open = true;
-
-    // si c'est ouvert
-    } else {
-        console.log('2');
-        tweenCatFunctionality.play();
-        tweenCatFunctionalityEvent.play();
-        cat_MainFunctionality_open = false;
-    }
-})
