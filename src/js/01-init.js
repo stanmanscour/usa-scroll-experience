@@ -45,6 +45,6 @@ $(window).resize(function(){
 */
 
 $("body").mousewheel(function(event, delta) {
-	this.scrollLeft -= (delta * 2);
+	this.scrollLeft -= (delta * 30);
 	event.preventDefault();   
 });
