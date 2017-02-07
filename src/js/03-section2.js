@@ -104,7 +104,7 @@ tweenCatFunctionalityHide.pause();
 
 var tweenCatClinton = TweenMax.to($cat_clinton, 1, {
     opacity: "0",
-    bottom: '-19%',
+    bottom: '-17%',
     ease:Power1.easeInOut
 })
 tweenCatClinton.pause();
@@ -120,7 +120,7 @@ tweenCatTexts.pause();
 
 var tweenCatTitle = TweenMax.to($cat_title, 1, {
     //opacity: "0",
-    top: '6%',
+    top: '4%',
     left: '17%',
     ease:Power1.easeInOut,
 })
