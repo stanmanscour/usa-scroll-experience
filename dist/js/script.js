@@ -303,8 +303,6 @@ $(function(){
 
 
 })
-
-
 /*
 *MENU CHRONOLOGIE
 *

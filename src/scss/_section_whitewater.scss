@@ -1,12 +1,26 @@
-.section_three {
+.section_four {
 	.content {
-		.section_mainImage img {
+		.section_mainImage img{
 			bottom: -10%;
-			left: 10%;
+			left: -5%!important;
 		}
-		.section_bcgImage_1 {
-			top: 15%;
-			left: 10%;
+		.section_bcgImage_1  {
+			left: 7%!important;
+    		bottom: -13%!important;
+
+    		img {
+    			opacity: 0.3;
+    		}
+		}
+		.section_mainFunctionality {
+			position: absolute;
+		    top: 30%;
+		    right: 21%;
+
+		    img {
+		    	height: 188px;
+				filter: brightness(60%) saturate(0%);
+		    }
 		}
 	}
 }
