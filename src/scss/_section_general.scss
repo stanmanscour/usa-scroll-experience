@@ -44,6 +44,7 @@
 				//text-transform: uppercase;
 				font-size: 40px;
 				font-weight: 600;
+				z-index: 500;
 
 				h2 {
 
@@ -150,10 +151,91 @@
 			position: absolute;
 			bottom: -500%;
 			overflow-y: auto;
+			z-index: 2000;
 			.container_secondBox {
-				height: 2000px;
-				background: red;
-			} 
+				height: 1500px;
+				background: white;
+				position: relative;
+				.secondBox_section1 {
+					.section1_img {
+						position: absolute;
+						top: 10%;
+						left: 30%;
+						width: 250px;
+						height: 330px;
+						background-image: url('../../dist/img/clinton_cover_Time.png');
+						background-repeat: no-repeat;
+						background-size: cover;
+						transition: 2s;
+						&:hover {
+							background-image: url('../../dist/img/clinton_cover_Timecolor.png');
+							transition: 2s;
+						}
+					}
+					.section1_content {
+						position: absolute;
+						top: 20%;
+						left: 50%;
+						text-align: left;
+					}
+				}
+				.secondBox_section2 {
+					.section2_img {
+						position: absolute;
+						left: 55%;
+						top: 45%;
+						img {
+							width: 300px;
+						}
+					}
+					.section2_content {
+						position: absolute;
+						top: 45%;
+						left: 20%;
+						text-align: right;
+					}
+				}
+				.secondBox_section3 {
+					.section3_img {
+
+					}
+					.section3_content {
+						position: absolute;
+						top: 70%;
+						left: 50%;
+						.content_title {
+							background-color: black;
+							color: white;
+							font-size: 32px;
+							width: 180px;
+							padding: 10px;
+							&:first-child {
+								width: 200px;
+							}
+						}
+					}
+					.section3_content2 {
+						.content_text {
+							position: absolute;
+							top: 80%;
+							left: 30%;
+							text-align: right;
+							width: 500px;
+						}
+					}
+				}
+			}
+			.content_text {
+				width: 350px;
+				height: 500px;
+				line-height: 170%;
+				font-size: 14px;
+				margin-top: 20px;
+			}
+			.content_title {
+				font-weight: bold;
+				font-size: 26px;
+			}
 			.contentSecond_box_title1, .contentSecond_box_title2, .contentSecond_box_title3 {
 				text-transform: uppercase;
 				font-size: 16pt;
