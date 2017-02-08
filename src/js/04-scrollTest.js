@@ -59,16 +59,34 @@ scrollSectionButton.click(function () {
     );
     return false;
 });
- 
+
+
+var $chronoMenu = $('.menu_chronologie');
+
 // Afficher le menu dès qu'on arrive sur la 2e section
 function toggleMenu() {
     var doc = document.documentElement;
     var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
     var windowWidth = window.innerWidth;
+    var ChronoMenuHeight = $chronoMenu.css('height');
     if(windowWidth/2 <= left && windowWidth*6.5 > left) {
-        $('.menu_chronologie').addClass('opacity1');
+        //$('.menu_chronologie').addClass('opacity1');
+
+        var tweenChronoMenu = TweenMax.to($chronoMenu, 1, {
+            opacity: 1,
+            bottom: '0%',
+            ease:Circ.easeOut
+           // bottom: ChronoMenuHeight + 'px'
+        })
+
     } else {
-        $('.menu_chronologie').removeClass('opacity1');
+        // $('.menu_chronologie').removeClass('opacity1');
+        var tweenChronoMenu = TweenMax.to($chronoMenu, 2, {
+            opacity: 1,
+            bottom: '-60px',
+            ease:Circ.easeOut
+            //bottom: '-' + ChronoMenuHeight + 'px'
+        })
     }
 }
 $(document).ready(function(){

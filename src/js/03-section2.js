@@ -173,7 +173,7 @@ $(function() {
     var $cat_content = $('.section_contentSecond');
 
     $cat_action.click(function(evt) {
-        // console.log(evt);
+        console.log(evt);
         // console.log('cat_content_opening: '+cat_content_opening);
         if (cat_content_opening) {
             // Exit function si l'animation est déjà en cours

@@ -37,9 +37,6 @@ $(function() {
 	    $('td').css('min-width', windowWidth + 'px');
 	    $('td').css('min-height', windowHeight + 'px');
 	    $('td').css('height', windowHeight + 'px');
-
-	    console.log("nouvelle height = " + windowHeight + "px");
-	    console.log("nouvelle width = " + windowWidth + "px");
 	}
 
 	updateWindow();
