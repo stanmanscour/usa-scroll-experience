@@ -237,5 +237,20 @@ $(function() {
 
     });
 
+    var SecondContentcontroller = new ScrollMagic.Controller();
+
+    var scene = new ScrollMagic.Scene({
+                triggerElement: ".container_secondBox",
+                offset: '400%'
+            })
+            .setTween(".container_secondBox", 0.5, {backgroundColor: "green"}) // trigger a TweenMax.to tween
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(SecondContentcontroller);
+
+
 
 });
+
+
+
+// On récupère la position du slide 2

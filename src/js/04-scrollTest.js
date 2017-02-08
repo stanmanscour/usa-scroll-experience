@@ -95,3 +95,71 @@ $(document).ready(function(){
     });
     toggleMenu();
 });
+
+// Div link next section
+$('.section2to3').click(function() {
+    var offsetLeft = $("#scroll_sectionThree").offset().left;
+
+    // On anime le slide 2 pour qu'il soit centré dans la fenêtre
+    $('html, body').stop().animate(
+    {
+        scrollLeft: offsetLeft
+    },
+    1000);
+    return false;
+
+});
+
+
+$('.section3to4').click(function() {
+    var offsetLeft = $("#scroll_sectionFour").offset().left;
+
+    // On anime le slide 2 pour qu'il soit centré dans la fenêtre
+    $('html, body').stop().animate(
+    {
+        scrollLeft: offsetLeft
+    },
+    1000);
+    return false;
+
+});
+
+$('.section4to5').click(function() {
+    var offsetLeft = $("#scroll_sectionFive").offset().left;
+
+    // On anime le slide 2 pour qu'il soit centré dans la fenêtre
+    $('html, body').stop().animate(
+    {
+        scrollLeft: offsetLeft
+    },
+    1000);
+    return false;
+
+});
+
+$('.section5to6').click(function() {
+    var offsetLeft = $("#scroll_sectionSix").offset().left;
+
+    // On anime le slide 2 pour qu'il soit centré dans la fenêtre
+    $('html, body').stop().animate(
+    {
+        scrollLeft: offsetLeft
+    },
+    1000);
+    return false;
+
+});
+
+
+$('.section6to7').click(function() {
+    var offsetLeft = $("#scroll_sectionSeven").offset().left;
+
+    // On anime le slide 2 pour qu'il soit centré dans la fenêtre
+    $('html, body').stop().animate(
+    {
+        scrollLeft: offsetLeft
+    },
+    1000);
+    return false;
+
+});
