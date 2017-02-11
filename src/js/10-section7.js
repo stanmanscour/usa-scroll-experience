@@ -14,3 +14,8 @@ var scene = new ScrollMagic.Scene({ triggerElement: ".section_seven .content", d
     .setTween(tweenSection7)
     .addIndicators() // add indicators (requires plugin)
     .addTo(controller_section7);
+
+
+$('.section_discover').on('click', function(){
+    console.log($(this).attr('class'))
+});
