@@ -1,3 +1,7 @@
+$(window).load(function() {
+	$(".loader-container").fadeOut("1000");
+})
+
 var scrollAllowed = true;
 function toggleScrollX() {
     if(scrollAllowed) {

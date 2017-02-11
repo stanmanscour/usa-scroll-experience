@@ -6,6 +6,26 @@ body{
   width: 100%;
 }
 
+.loader-container {
+  position : fixed;
+  z-index: 9999;
+  // background : url('icon-loader.gif') 50% 50% no-repeat;
+  top : 0px;
+  background: #fff;
+  left : 0px;
+  height : 100%;
+  width : 100%;
+  cursor : wait;
+}
+
+.loader-content {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+}
+
 #container {
   width: 800%;
   height: 100%;
