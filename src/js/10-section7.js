@@ -31,6 +31,57 @@ var tweenSection7 = new TimelineMax()
     });
 
 
+    var timelineActionLine = function($black, $white){
+        let tl = new TimelineMax();
+        tl.to($black, 0.2, {width: "100%"})
+        .to($white, 0.4, {width: "100%"}, "=+0.1")
+        .to($black, 0, {width: "0%"})
+        .to($white, 0, {width: "0%"})
+    }
+
+    var animLogo = true;
+
+    $('.menu-header-logo-container').on('click', function(){
+        $('.menu-header-nav-container').toggle();
+
+        if ($('.menu-header-nav-container').css('display') !== 'none'){
+            animLogo = false;
+        } else {
+            animLogo = true;
+        }
+    })
+
+    $('.menu-header-logo-container').on('mouseenter', function(){
+        let $black =  $(this).find('.actionBlackLine');
+        let $white = $(this).find('.actionWhiteLine');
+        
+        if (animLogo){
+            timelineActionLine($black, $white);
+        }
+        
+    })
+
+
+
+    $('.section_discover').on('mouseenter', function(){
+
+        let $black =  $(this).find('.actionBlackLine');
+        let $white = $(this).find('.actionWhiteLine');
+
+        if ($black.length === 0){
+            $(this)
+                .append( $('<span/>').addClass('actionBlackLine'))
+                .append( $('<span/>').addClass('actionWhiteLine'));
+
+            $black =  $(this).find('.actionBlackLine');
+            $white = $(this).find('.actionWhiteLine');   
+        }
+
+        timelineActionLine($black, $white);
+    })
+
+
+
     var animationPlaying = false;
 
     var discoverContent = function($section, section){
@@ -72,6 +123,7 @@ var tweenSection7 = new TimelineMax()
             var $sectionTitle = $('.js-section-'+section +' .section_title');
             var $sectionIntro = $('.js-section-'+section +' .section_text');
             var $sectionFunctionality = $('.js-section-'+section +' .section_mainFunctionality');
+            var $sectionNextBtn = $('.js-section-'+section+' .section_next');
 
 
             timelineGlobalAnim = new TimelineMax();
@@ -82,12 +134,14 @@ var tweenSection7 = new TimelineMax()
                 .to($sectionIntro, 1, { top: "20%", opacity: "0", ease: Power1.easeInOut }, "hideTrump+=0.45")
                 .to($chronoMenu, 0.8, { bottom: "-70px", ease: Power1.easeInOut }, "hideTrump+=0.75")
                 .to($sectionFunctionality, 1, {top: "15%",opacity: "0",ease: Power1.easeInOut}, "hideTrump+=0.55")
-                .to($sectionContent, 2, {
-                    top: "20%",
+                .to($sectionContent, 2, {top: "10%", ease: Power1.easeInOut})
+                .to($sectionNextBtn, 2, {
+                    top: "76%",
+                    opacity: "0",
                     ease: Power1.easeInOut
-                })
+                }, "hideTrump")
 
-            $sectionDiscoverAction.css('top', '10%');
+            $sectionDiscoverAction.css('top', '5%');
 
             // $('.js-contratATerme_action .upperText').html('Close');
             // $('.js-contratATerme_action .simpleText').html('Go to the timeline');

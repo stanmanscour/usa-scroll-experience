@@ -66,3 +66,70 @@ body{
   color: black;
   font-family: 'Roboto';
 }
+
+.actionWhiteLine {
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  background: #fff;
+  bottom: -3px;
+}
+
+.actionBlackLine {
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  background: #000;
+  bottom: -3px;
+}
+
+.menu-header {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.menu-header-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .svgmenu {
+    height: 26px;
+    margin-right: 1px;
+    padding-bottom: 2px;
+  }
+  .logotext {
+    font-size: 15px;
+    color: #000;
+    font-family: 'Roboto';
+    font-weight: 600;
+  }
+
+}
+
+.menu-header-nav-container {
+
+  margin-top: 1px;
+  margin-left: 25px;
+  font-size: 15px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  display: none;
+
+  a {
+    font-size: 14px;
+    color: #757575;
+    text-decoration: none;
+    margin: 0px 10px;
+  }
+
+}
+
