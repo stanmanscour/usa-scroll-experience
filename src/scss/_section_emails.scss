@@ -1,19 +1,23 @@
 .section_six {
-	.content {
-		.section_contentFirst {
-			.section_bcgImage_1 img {
-				bottom: -10%!important;
-				left: -5%!important;
-			}
-
-			.section_bcgImage_1 {
-				bottom: -17%;
-    			left: 20%;
-
-    			img {
-    				opacity: 0.3;
-    			}
-			}
-		}
-	}
+    .content {
+        .section_contentFirst {
+            .section_mainImage img {
+                bottom: 0;
+            }
+            .section_bcgImage_1 img {
+                bottom: -10%;
+                left: 0;
+            }
+            .section_bcgImage_1 {
+                bottom: -17%;
+                left: 20%;
+                img {
+                    opacity: 0.3;
+                }
+            }
+            .section_discover {
+                left: 65%;
+            }
+        }
+    }
 }
