@@ -26,5 +26,19 @@
                 left: 80%;
             }
         }
+        .section_contentSecond {
+            .container_secondBox {
+                .secondBox_section3 {
+                    .section3_content {
+                        .content_title {
+                            width: 185px;
+                            &:first-child {
+                                width: 155px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
