@@ -3,7 +3,7 @@
         .section_contentFirst {
             .section_mainImage img {
                 bottom: -20%;
-                left: -5%;
+                left: -11%;
             }
             .section_bcgImage_1 {
                 left: 7%;
@@ -12,18 +12,26 @@
                     opacity: 0.3;
                 }
             }
+            .section_text {
+                top: 31%;
+                left: 25%;
+            }
+            .section_title {
+                top: 23%;
+                left: 20%;
+            }
             .section_mainFunctionality {
                 position: absolute;
                 top: 50%;
-                right: 21%;
+                right: 10%;
                 img {
                     height: 188px;
                     filter: brightness(60%) saturate(0%);
                 }
             }
             .section_discover {
-                top: 40%;
-                left: 80%;
+                top: 51%;
+                left: 56%;
             }
         }
         .section_contentSecond {

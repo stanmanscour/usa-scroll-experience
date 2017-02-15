@@ -2,8 +2,16 @@
     .content {
         .section_contentFirst {
             .section_mainImage img {
-                bottom: -10%;
+                bottom: -4%;
                 left: 0%;
+            }
+            .section_title {
+                top: 20%;
+            }
+            .section_title2 {
+                position: absolute;
+                top: 28%;
+                left: 35%;
             }
             .section_bcgImage_1 {
                 bottom: -17%;
