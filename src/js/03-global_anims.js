@@ -312,31 +312,31 @@ $('.section6to7').click(function() {
 
 });
 
-let g = $('<div/>').css({
-        width: "100%",
-        height: "100%",
-        background: "red"
-    })
+// let g = $('<div/>').css({
+//         width: "100%",
+//         height: "100%",
+//         background: "red"
+//     })
 
 
-$(function(){
-  var curDown = false,
-      curYPos = 0,
-      curXPos = 0;
-  $(window).mousemove(function(m){
-    if(curDown === true){
-     $(window).scrollTop($(window).scrollTop() + (curYPos - m.pageY)); 
-     $(window).scrollLeft($(window).scrollLeft() + (curXPos - m.pageX));
-    }
-  });
+// $(function(){
+//   var curDown = false,
+//       curYPos = 0,
+//       curXPos = 0;
+//   $(window).mousemove(function(m){
+//     if(curDown === true){
+//      $(window).scrollTop($(window).scrollTop() + (curYPos - m.pageY)); 
+//      $(window).scrollLeft($(window).scrollLeft() + (curXPos - m.pageX));
+//     }
+//   });
   
-  $(window).mousedown(function(m){
-    curDown = true;
-    curYPos = m.pageY;
-    curXPos = m.pageX;
-  });
+//   $(window).mousedown(function(m){
+//     curDown = true;
+//     curYPos = m.pageY;
+//     curXPos = m.pageX;
+//   });
   
-  $(window).mouseup(function(){
-    curDown = false;
-  });
-})
+//   $(window).mouseup(function(){
+//     curDown = false;
+//   });
+// })
