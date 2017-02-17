@@ -184,10 +184,12 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
                     .addTo(controllerMenu);
  
     var controllerMenuLine = new ScrollMagic.Controller({ vertical: false});
-    var tweenLine = TweenMax.to(".chrono-menu-line", 0.5, {width: "75%"});
+    var tweenLine = TweenMax.to(".chrono-menu-line", 0.5, {
+        width: "100%"
+    });
     var MenuLineSccene = new ScrollMagic.Scene({
       triggerElement: "#container",
-      duration: "600%"
+      duration: "1400%"
     })
     .setTween(tweenLine)
     .addIndicators()
