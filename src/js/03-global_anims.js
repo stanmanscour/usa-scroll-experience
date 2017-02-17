@@ -183,6 +183,18 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
                     .addIndicators() // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
+    var controllerMenuLine = new ScrollMagic.Controller({ vertical: false});
+    var tweenLine = TweenMax.to(".chrono-menu-line", 0.5, {width: "75%"});
+    var MenuLineSccene = new ScrollMagic.Scene({
+      triggerElement: "#container",
+      duration: "600%"
+    })
+    .setTween(tweenLine)
+    .addIndicators()
+    .addTo(controllerMenuLine);    
+
+
+
 //Section scrollTo
 var scrollSectionButton = $('[id^=scrollTo_section]');
 scrollSectionButton.click(function () {
