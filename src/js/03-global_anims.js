@@ -121,7 +121,35 @@ var discoverContent = function($section, section) {
                         timelineGlobalAnim.to($sectionTitle2, 1, { top: "15%", opacity: "0", ease: Power1.easeInOut }, "hideTrump+=0.35")
                     }
 
-                $sectionDiscoverAction.css('top', '5%');
+                //$sectionDiscoverAction.css('top', '5%');
+
+                var changeDiscoverText = function(){
+                        $sectionDiscoverAction.find('.upperText').text('go Back');
+                        $sectionDiscoverAction.find('.simpleText').text('Jump to the timeline');
+                }
+
+                var changeDiscoverTextReverse = function(){
+                    $sectionDiscoverAction.find('.upperText').text('gergrgk');
+                    $sectionDiscoverAction.find('.simpleText').text('Jump to the timeline');
+                }
+
+                TimelineDiscoverAction = new TimelineMax();
+
+                TimelineDiscoverAction
+                    .to($sectionDiscoverAction, 1, {
+                        opacity: 0
+                    })
+                    .to($sectionDiscoverAction, 1, {
+                        top: "5%",
+                        onComplete: changeDiscoverText,
+                        onReverseComplete: changeDiscoverTextReverse
+                    })
+                    .to($sectionDiscoverAction, 1, {
+                        opacity: 1
+                    })
+
+                   
+                
 
                 // $('.js-contratATerme_action .upperText').html('Close');
                 // $('.js-contratATerme_action .simpleText').html('Go to the timeline');
@@ -139,7 +167,12 @@ var discoverContent = function($section, section) {
 
         parallaxCatActionAuthorised = true;
 
-        $sectionDiscoverAction.css('top', '53%')
+        // $sectionDiscoverAction.css('top', '53%')
+
+        
+        
+
+        TimelineDiscoverAction.reverse();
 
         animationPlaying = false;
         $section.data('open', 0);
