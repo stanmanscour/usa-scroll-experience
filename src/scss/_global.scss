@@ -7,6 +7,12 @@
         background-color: #fff;
         margin: auto auto;
     }
+    body::-webkit-scrollbar {
+        background: transparent;
+    } 
+    .section_contentSecond::-webkit-scrollbar {
+        background: transparent;
+    }
     
     body {
         background-color: #fff;
