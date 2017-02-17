@@ -177,6 +177,7 @@
 						background-repeat: no-repeat;
 						background-size: cover;
 						transition: 2s;
+						opacity: 0;
 						&:hover {
 							background-image: url('../../dist/img/clinton_cover_Timecolor.png');
 							transition: 2s;
@@ -187,13 +188,15 @@
 						top: 20%;
 						left: 50%;
 						text-align: left;
+						opacity: 0;
 					}
 				}
 				.secondBox_section2 {
 					.section2_img {
 						position: absolute;
-						left: 55%;
+						right: 15%;
 						top: 45%;
+						opacity: 0;
 						img {
 							width: 300px;
 						}
@@ -201,8 +204,9 @@
 					.section2_content {
 						position: absolute;
 						top: 45%;
-						left: 20%;
+						left: 15%;
 						text-align: right;
+						opacity: 0;
 					}
 				}
 				.secondBox_section3 {
@@ -211,8 +215,9 @@
 					}
 					.section3_content {
 						position: absolute;
-						top: 70%;
+						top: 80%;
 						left: 50%;
+						opacity: 0;
 						.content_title {
 							background-color: black;
 							color: white;
@@ -231,6 +236,7 @@
 							left: 30%;
 							text-align: right;
 							width: 500px;
+							opacity: 0;
 						}
 					}
 				}
