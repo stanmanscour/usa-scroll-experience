@@ -45,12 +45,12 @@ $(function() {
                 $('td').css('min-width', windowWidth + 'px');
                 $('td').css('min-height', windowHeight + 'px');
                 $('td').css('height', windowHeight + 'px');
+                $('.chrono-menu').css('width', windowWidth + 'px');
             }
 
             updateWindow();
 
             $(window).resize(function() {
-                console.log("hey");
                 updateWindow();
             })
 

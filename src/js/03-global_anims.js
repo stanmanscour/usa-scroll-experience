@@ -209,7 +209,7 @@ scrollSectionButton.click(function () {
 });
 
 
-var $chronoMenu = $('.menu_chronologie');
+var $chronoMenu = $('.chrono-menu');
 
 // Afficher le menu dès qu'on arrive sur la 2e section
 function toggleMenu() {
@@ -231,7 +231,7 @@ function toggleMenu() {
         // $('.menu_chronologie').removeClass('opacity1');
         var tweenChronoMenu = TweenMax.to($chronoMenu, 2, {
             opacity: 1,
-            bottom: '-60px',
+            bottom: '-64px',
             ease:Circ.easeOut
             //bottom: '-' + ChronoMenuHeight + 'px'
         })
