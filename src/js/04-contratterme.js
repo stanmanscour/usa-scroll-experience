@@ -25,6 +25,21 @@
         .addTo(controller_section2);
     });
 
+
+    var controller_section2Menu = new ScrollMagic.Controller({ vertical: false });
+    var tweenLine = TweenMax.to(".chrono-menu-lineSection", 1, {
+        width: "100%"
+    });
+
+    var sceneMenuSection2 = new ScrollMagic.Scene({ 
+        triggerElement: ".section_two .content",
+        duration: '100%',
+        offset: 0
+     })
+     .setTween(tweenLine)
+     .addIndicators()
+     .addTo(controller_section2Menu);
+    
     var controller_content2Section = new ScrollMagic.Controller();
 
     var AnimSection2_Content1 = new TimelineMax()

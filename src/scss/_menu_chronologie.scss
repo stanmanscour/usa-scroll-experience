@@ -19,7 +19,7 @@
 	position: relative;
 	height: 100%;
 	align-items: center;
-	    flex-direction: row;
+	flex-direction: row;
     width: 100%;
     justify-content: space-around;
 }
@@ -29,6 +29,20 @@
 	font-family: 'Roboto';
 	color: black;
 	font-weight: 600;
+	flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+	position: relative;
+	.chrono-menu-lineSection2, .chrono-menu-lineSection3, .chrono-menu-lineSection4, .chrono-menu-lineSection5, .chrono-menu-lineSection6, .chrono-menu-lineSection7{
+		position: absolute;
+		bottom: 0;
+		height: 5px;
+		width: 0%;
+		background: black;
+	}
+
+
 
 	a {
 		color: black;
@@ -48,7 +62,7 @@
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	width: 45px;
+	width: 10%;
 	background: black;
 	height: 5px;
 }

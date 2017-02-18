@@ -164,6 +164,7 @@ var discoverContent = function($section, section) {
     } else { // ouvert
 
         timelineGlobalAnim.reverse();
+        
 
         parallaxCatActionAuthorised = true;
 
@@ -187,46 +188,110 @@ var discoverContent = function($section, section) {
 var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOptions: {duration: '100%'}});
  
     new ScrollMagic.Scene({triggerElement: ".section_two"})
-                    .setClassToggle(".nav_section1 a", "active") // add class toggle
+                    .setClassToggle(".section2Menu a", "active") // add class toggle
                     .addIndicators() // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_three"})
-                    .setClassToggle(".nav_section2 a", "active") // add class toggle
+                    .setClassToggle(".section3Menu a", "active") // add class toggle
                     .addIndicators() // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_four"})
-                    .setClassToggle(".nav_section3 a", "active") // add class toggle
+                    .setClassToggle(".section4Menu a", "active") // add class toggle
                     .addIndicators() // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_five"})
-                    .setClassToggle(".nav_section4 a", "active") // add class toggle
+                    .setClassToggle(".section5Menu a", "active") // add class toggle
                     .addIndicators() // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_six"})
-                    .setClassToggle(".nav_section5 a", "active") // add class toggle
+                    .setClassToggle(".section6Menu a", "active") // add class toggle
                     .addIndicators() // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_seven"})
-                    .setClassToggle(".nav_section6 a", "active") // add class toggle
+                    .setClassToggle(".section7Menu a", "active") // add class toggle
                     .addIndicators() // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
-    var controllerMenuLine = new ScrollMagic.Controller({ vertical: false});
-    var tweenLine = TweenMax.to(".chrono-menu-line", 0.5, {
+
+    
+    var controller_sectionMenu = new ScrollMagic.Controller({ vertical: false });
+
+    var tweenLine2 = TweenMax.to(".chrono-menu-lineSection2", 1, {
         width: "100%"
     });
-    var MenuLineSccene = new ScrollMagic.Scene({
-      triggerElement: "#container",
-      duration: "1400%"
-    })
-    .setTween(tweenLine)
-    .addIndicators()
-    .addTo(controllerMenuLine);    
+    var sceneMenuSection2 = new ScrollMagic.Scene({ 
+        triggerElement: ".section_two .content",
+        duration: '100%',
+        offset: 0
+     })
+     .setTween(tweenLine2)
+     .addIndicators()
+     .addTo(controller_sectionMenu);
+
+    var tweenLine3 = TweenMax.to(".chrono-menu-lineSection3", 1, {
+        width: "100%"
+    });
+     var sceneMenuSection3 = new ScrollMagic.Scene({ 
+        triggerElement: ".section_three .content",
+        duration: '100%',
+        offset: 0
+     })
+     .setTween(tweenLine3)
+     .addIndicators()
+     .addTo(controller_sectionMenu);
+
+    var tweenLine4 = TweenMax.to(".chrono-menu-lineSection4", 1, {
+        width: "100%"
+    });
+     var sceneMenuSection4 = new ScrollMagic.Scene({ 
+        triggerElement: ".section_four .content",
+        duration: '100%',
+        offset: 0
+     })
+     .setTween(tweenLine4)
+     .addIndicators()
+     .addTo(controller_sectionMenu);
+
+    var tweenLine5 = TweenMax.to(".chrono-menu-lineSection5", 1, {
+        width: "100%"
+    });
+     var sceneMenuSection5 = new ScrollMagic.Scene({ 
+        triggerElement: ".section_five .content",
+        duration: '100%',
+        offset: 0
+     })
+     .setTween(tweenLine5)
+     .addIndicators()
+     .addTo(controller_sectionMenu);
+
+    var tweenLine6 = TweenMax.to(".chrono-menu-lineSection6", 1, {
+        width: "100%"
+    });
+     var sceneMenuSection6 = new ScrollMagic.Scene({ 
+        triggerElement: ".section_six .content",
+        duration: '100%',
+        offset: 0
+     })
+     .setTween(tweenLine6)
+     .addIndicators()
+     .addTo(controller_sectionMenu);
+
+    var tweenLine7 = TweenMax.to(".chrono-menu-lineSection7", 1, {
+        width: "100%"
+    });
+     var sceneMenuSection7 = new ScrollMagic.Scene({ 
+        triggerElement: ".section_seven .content",
+        duration: '100%',
+        offset: 0
+     })
+     .setTween(tweenLine7)
+     .addIndicators()
+     .addTo(controller_sectionMenu);
 
 
 
