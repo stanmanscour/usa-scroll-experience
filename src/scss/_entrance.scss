@@ -7,18 +7,18 @@
       height: 100%;
       .entrance_title {
         position: absolute;
-        top: 33%;
-        font-size: 85px;
-        font-weight: 500;
+        top: 34%;
+        font-size: 65px;
+        font-weight: 600;
         text-align: left;
-        width: 100%;
         left: 30%;
       }
       .entrance_description {
         position: absolute;
-        top: 45%;
+        top: 43%;
         width: 35%;
         text-align: left;
+        font-weight: 500;
         line-height: 200%;
         left: 30.5%;
         font-size: 18px;
@@ -31,23 +31,42 @@
         color: #8b8b8b;
       }
       .entrance_scrollAction {
-        text-align: center;
+        width: 130px;
+        background: #eee;
         font-size: 12px;
         font-weight: 300;
         position: absolute;
         right: 1%;
         top: 50%;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
         span {
           display: inline-block;
-          width: 100px;
+          
           height: 3px;
-          background: black;
+          
           vertical-align: middle;
           margin-right: 5px;
+          position: absolute;
+          width: 0px;
         }
+
+        .spanWhite {
+          background: #fff;
+        }
+
+        .spanBlack {
+          background: black;
+        }
+
         p {
           display: inline-block;
+          font-weight: 500;
+          color: black;
+          position: absolute;
+          right: 0;
         }
       }
     }
