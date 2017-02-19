@@ -7,55 +7,48 @@
       height: 100%;
       .entrance_title {
         position: absolute;
-        top: 15%;
-        font-size: 30pt;
+        top: 33%;
+        font-size: 85px;
         font-weight: 500;
-        text-transform: uppercase;
-        text-align: center;
+        text-align: left;
         width: 100%;
+        left: 30%;
       }
       .entrance_description {
         position: absolute;
-        top: 25%;
-      width: 100%;
-        text-align: center;
-        line-height: 175%;
-        .entrance_description_box {
-          width: 300px;
-          margin: 0 auto;
-        }
+        top: 45%;
+        width: 35%;
+        text-align: left;
+        line-height: 200%;
+        left: 30.5%;
+        font-size: 18px;
       }
-      .entrance_background {
+      .entrance_howTo {
         position: absolute;
-        top: -45%;
-        left: -15%;
-      }
-      .entrance_candidats {
-        .entrance_candidats_trump {
-          position: absolute;
-          bottom: 0;
-          left: 10%;
-          img {
-            width: 100%;
-          }
-        }
-        .entrance_candidats_clinton {
-          position: absolute;
-          bottom: 0;
-      right: 10%;
-      img {
-        width: 100%;
-      }
-        }
+        top: 65%;
+        left: 30.5%;
+        font-size: 14px;
+        color: #8b8b8b;
       }
       .entrance_scrollAction {
         text-align: center;
-      font-size: 12px;
-      font-weight: 300;
+        font-size: 12px;
+        font-weight: 300;
         position: absolute;
-        right: 0;
-        width: 75px;
+        right: 1%;
         top: 50%;
+        display: inline-block;
+        span {
+          display: inline-block;
+          width: 100px;
+          height: 3px;
+          background: black;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+        p {
+          display: inline-block;
+        }
       }
     }
 }
