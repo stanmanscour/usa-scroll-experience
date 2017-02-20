@@ -1,7 +1,13 @@
 $(window).load(function() {
 
+    var body = $("html, body");
+    body.stop().animate({
+        scrollLeft: 0
+    })
+
+
     var scrollAllowed = false;
-    
+
     var loaderAnimationTimeline = new TimelineMax();
 
     var $loaderText = $('.loader-absolute p'),
