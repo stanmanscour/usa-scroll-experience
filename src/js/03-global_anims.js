@@ -86,7 +86,7 @@ var discoverContent = function($section, section) {
     if (t === 0) { // fermé
 
         let containerWidth = $('#container').width();
-        parallaxCatActionAuthorised = false;
+        parallaxActionAuthorised = false;
 
         let offsetLeft = $section.offset().left;
 
@@ -166,7 +166,7 @@ var discoverContent = function($section, section) {
         timelineGlobalAnim.reverse();
         
 
-        parallaxCatActionAuthorised = true;
+        parallaxActionAuthorised = true;
 
         // $sectionDiscoverAction.css('top', '53%')
 

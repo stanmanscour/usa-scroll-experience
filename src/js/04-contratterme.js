@@ -101,7 +101,7 @@
         $cat_background = $('.contratATerme_background img'),
         $cat_action = $('.js-contratATerme_action');
 
-    var parallaxCatActionAuthorised = true;
+    var parallaxActionAuthorised = true;
 
     $(function() {
 
@@ -110,17 +110,10 @@
         $cat_action.homePos = { x: $cat_action.css('left').split('px')[0], y: $cat_action.css('top').split('px')[0] };
 
         $('.section_two').mousemove(function(e) {
-            // $cat_year.homePos = { x: $cat_year.css('left').split('px')[0], y: $cat_year.css('top').split('px')[0] };
-            // $cat_clinton_img.homePos = { x: $cat_clinton_img.css('left').split('px')[0], y: $cat_clinton_img.css('bottom').split('px')[0] };
-
             parallax(e, $cat_background, 40, 'left', 'top');
             parallax(e, $cat_year, 40, 'left', 'top');
-            // parallax(e, $cat_clinton_img, 25, 'left', 'bottom');
-            // parallax(e, $cat_title, 40, 'left', 'top');
-            // parallax(e, $cat_intro, 60, 'left', 'top');
-
-            if (parallaxCatActionAuthorised) {
-                // console.log(parallaxCatActionAuthorised);
+            
+            if (parallaxActionAuthorised) {
                 parallax(e, $cat_action, 60, 'left', 'top');
             }
         })
