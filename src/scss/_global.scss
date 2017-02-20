@@ -8,10 +8,10 @@
         margin: auto auto;
     }
     body::-webkit-scrollbar {
-        background: transparent;
+         background-image: url('../../dist/img/bcg_site.png');
     } 
     .section_contentSecond::-webkit-scrollbar {
-        background: transparent;
+         background-image: url('../../dist/img/bcg_site.png');
     }
     
     body {
@@ -67,6 +67,7 @@
         height: 100%;
         position: absolute;
         overflow: hidden;
+        background-image: url('../../dist/img/bcg_site.png');
     }
     
     .absolute {
