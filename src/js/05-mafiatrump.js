@@ -13,7 +13,7 @@ var tweenSection3 = new TimelineMax()
 // build scene
 var scene = new ScrollMagic.Scene({ triggerElement: ".section_three .content", duration: '100%', offset: "-400%" })
     .setTween(tweenSection3)
-    .addIndicators() // add indicators (requires plugin)
+     // add indicators (requires plugin)
     .addTo(controller_section3);
 
     var parallax = function parallax(e, target, layer, a, b) {

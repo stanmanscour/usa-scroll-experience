@@ -21,7 +21,7 @@
     // build scene
     var scene = new ScrollMagic.Scene({ triggerElement: ".section_two .content", duration: '100%', offset: 0 })
         .setTween(tweenSection2)
-        .addIndicators() // add indicators (requires plugin)
+         // add indicators (requires plugin)
         .addTo(controller_section2);
     });
 
@@ -37,7 +37,7 @@
         offset: 0
      })
      .setTween(tweenLine)
-     .addIndicators()
+     
      .addTo(controller_section2Menu);
     
     var controller_content2Section = new ScrollMagic.Controller();
@@ -53,7 +53,7 @@
       offset: 300
     })
     .setTween(AnimSection2_Content1)
-    .addIndicators()
+    
     .addTo(controller_content2Section);
 
     var AnimSection2_Content2 = new TimelineMax()
@@ -66,7 +66,7 @@
         offset: 600
     })
     .setTween(AnimSection2_Content2)
-    .addIndicators()
+    
     .addTo(controller_content2Section);
 
     var AnimSection2_Content3 = new TimelineMax()
@@ -79,7 +79,7 @@
         offset: 900
     })
     .setTween(AnimSection2_Content3)
-    .addIndicators()
+    
     .addTo(controller_content2Section);
 
 

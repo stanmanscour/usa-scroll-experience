@@ -189,32 +189,32 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
  
     new ScrollMagic.Scene({triggerElement: ".section_two"})
                     .setClassToggle(".section2Menu a", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
+                     // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_three"})
                     .setClassToggle(".section3Menu a", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
+                     // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_four"})
                     .setClassToggle(".section4Menu a", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
+                     // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_five"})
                     .setClassToggle(".section5Menu a", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
+                     // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_six"})
                     .setClassToggle(".section6Menu a", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
+                     // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
     new ScrollMagic.Scene({triggerElement: ".section_seven"})
                     .setClassToggle(".section7Menu a", "active") // add class toggle
-                    .addIndicators() // add indicators (requires plugin)
+                     // add indicators (requires plugin)
                     .addTo(controllerMenu);
  
 
@@ -230,7 +230,7 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
         offset: 0
      })
      .setTween(tweenLine2)
-     .addIndicators()
+     
      .addTo(controller_sectionMenu);
 
     var tweenLine3 = TweenMax.to(".chrono-menu-lineSection3", 1, {
@@ -242,7 +242,7 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
         offset: 0
      })
      .setTween(tweenLine3)
-     .addIndicators()
+     
      .addTo(controller_sectionMenu);
 
     var tweenLine4 = TweenMax.to(".chrono-menu-lineSection4", 1, {
@@ -254,7 +254,7 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
         offset: 0
      })
      .setTween(tweenLine4)
-     .addIndicators()
+     
      .addTo(controller_sectionMenu);
 
     var tweenLine5 = TweenMax.to(".chrono-menu-lineSection5", 1, {
@@ -266,7 +266,7 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
         offset: 0
      })
      .setTween(tweenLine5)
-     .addIndicators()
+     
      .addTo(controller_sectionMenu);
 
     var tweenLine6 = TweenMax.to(".chrono-menu-lineSection6", 1, {
@@ -278,7 +278,7 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
         offset: 0
      })
      .setTween(tweenLine6)
-     .addIndicators()
+     
      .addTo(controller_sectionMenu);
 
     var tweenLine7 = TweenMax.to(".chrono-menu-lineSection7", 1, {
@@ -290,7 +290,7 @@ var controllerMenu = new ScrollMagic.Controller({ vertical: false, globalSceneOp
         offset: 0
      })
      .setTween(tweenLine7)
-     .addIndicators()
+     
      .addTo(controller_sectionMenu);
 
 

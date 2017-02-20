@@ -17,5 +17,5 @@ var tweenSection7 = new TimelineMax()
 // build scene
 var scene = new ScrollMagic.Scene({ triggerElement: ".section_seven .content", duration: '100%', offset: 0 })
     .setTween(tweenSection7)
-    .addIndicators() // add indicators (requires plugin)
+     // add indicators (requires plugin)
     .addTo(controller_section7);
