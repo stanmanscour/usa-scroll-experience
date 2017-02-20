@@ -1,4 +1,2 @@
-# usa-scroll-experience
-
-# npm install 
-# gulp
+# Hidden Speech
+Plutôt que de pointer du doigt les différences entre les deux prétendants au poste de président des Etats-Unis d'Amérique, le projet **Hidden Speech** a pour intention de montrer les choses qu'ils partagent: **les affaires douteuses.**
