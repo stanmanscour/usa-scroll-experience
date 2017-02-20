@@ -45,6 +45,22 @@
         align-items: center;
         height: 100%;
     }
+
+    .loader-absolute {
+        position: relative;
+
+        p {
+            opacity: 0;
+        }
+    }
+
+    .blackLineLoader {
+        height: 200%;
+        width: 0px;
+        position: absolute;
+        background: black;
+        top: -50%;
+    }
     
     #container {
         width: 800%;

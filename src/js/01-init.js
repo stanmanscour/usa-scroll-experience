@@ -1,5 +1,35 @@
 $(window).load(function() {
-    $(".loader-container").fadeOut("1000");
+
+    var scrollAllowed = false;
+    
+    var loaderAnimationTimeline = new TimelineMax();
+
+    var $loaderText = $('.loader-absolute p'),
+        $loaderHide = $('.blackLineLoader'),
+        $loaderContainer = $('.loader-container');
+
+    loaderAnimationTimeline
+        .to($loaderHide, 1, {
+            width: "100%",
+            ease: Power1.easeInOut
+        }, 1)
+        .to($loaderHide, 0, {
+            css: {
+                right: "0px"
+            }
+        }, 2)
+        .to($loaderText, 1, {
+            opacity: "1"
+        }, 2)
+        .to($loaderHide, 1, {
+            width: "0%",
+            ease: Power1.easeInOut
+        }, 2.3)
+        
+
+    $loaderContainer.delay(6000).fadeOut("1000");
+
+    // $(".loader-container").fadeOut("1000");
 })
 
 var scrollAllowed = true;

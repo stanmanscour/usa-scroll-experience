@@ -24,6 +24,7 @@
 //})
 
 $(function(){
+	
 
 	var entranceShowTimeline = new TimelineMax();
 
@@ -34,27 +35,12 @@ $(function(){
 		$globalLogo = $('.menu-header')
 
 	entranceShowTimeline
-		.to($entTitle, 3, {})
-		.from($entTitle, 1, {
-			top: "30%",
-			opacity: 0,
-			ease: Power1.easeInOut
-		}, "bigTitle")
-		.from($entDesc, 1, {
-			top: "43%",
-			opacity: 0,
-			ease: Power1.easeInOut
-		}, "bigTitle+=1.5")
-		.from($entHow, 1, {
-			opacity: 0,
-			ease: Power1.easeInOut
-		}, 7)
-		.from($entScrollA, 0.4, {
-			opacity: 0
-		}, 9)
-		.from($globalLogo, 0.4, {
-			opacity: 0
-		}, 9)
+		.to($entTitle, 8, {})
+		.from($entTitle, 1, {top: "30%", opacity: 0, ease: Power1.easeInOut}, "bigTitle")
+		.from($entDesc, 1, {top: "43%", opacity: 0,ease: Power1.easeInOut}, "bigTitle+=1.5")
+		.from($entHow, 1, { opacity: 0,ease: Power1.easeInOut }, 11)
+		.from($entScrollA, 0.4, {opacity: 0 }, 12)
+		.from($globalLogo, 0.4, {opacity: 0 }, 12)
 
 
 	// animation scroll
