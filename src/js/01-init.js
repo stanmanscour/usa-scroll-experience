@@ -100,4 +100,27 @@ $(function() {
                     this.scrollLeft -= (delta * 30);
                     event.preventDefault();
                 }
-            });
+            });   
+
+            function music() {
+                var myAudio = $('#audio1');
+                myAudio.get(0).play();
+                myAudio.prop('volume', 0.1);
+            }
+            music();
+
+            function muteSound(){
+                $("#audio1").get(0).muted=true;
+            }
+            function unMuteSound(){
+                $('#audio1').get(0).muted=false;
+            }
+            $("#music-mute").click(function(){
+            if($(this).hasClass("sound-on")){
+                muteSound();
+            } else {
+                unMuteSound();
+            }
+            $(this).toggleClass("sound-on").toggleClass("sound-off");
+            return false;
+        });

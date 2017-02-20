@@ -69,6 +69,27 @@
         overflow: hidden;
         background-image: url('../../dist/img/bcg_site.png');
     }
+    .sound-on { 
+        background: url('../../dist/img/sound-on.png') no-repeat;
+        cursor: pointer;
+        height: 22px;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 24px;
+        z-index: 4000;
+    }
+    .sound-off { 
+        background: url('../../dist/img/sound-off.png') no-repeat;
+        cursor: pointer;
+        height: 22px;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 24px;
+        z-index: 4000;
+    }
+
     
     .absolute {
         position: absolute;
@@ -163,4 +184,5 @@
             text-decoration: none;
             margin: 0px 10px;
         }
+
     }
