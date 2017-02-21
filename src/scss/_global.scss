@@ -1,17 +1,46 @@
     // Mediaquerie
-    $limit-screen: 768px;
+    $limit-screen: 1024px;
     #disable-responsive {
         position: fixed;
+        display: none;
         width: 100%;
         height: 100%;
         background-color: #fff;
         margin: auto auto;
+        @media screen and (max-width: $limit-screen) {
+            z-index: 5000;
+            display: block;
+        }
+        p {
+            width: 100%;
+        }
+        p.text {
+            padding-top: 5%;
+            text-align: center;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+        .chrome {
+            text-align: center;
+            padding-top: 5%;
+        }
+        .disabled {
+            padding-top: 30%;
+            text-align: center;
+        }
     }
     body::-webkit-scrollbar {
          background-image: url('../../dist/img/bcg_site.png');
+         height: 0px;
+         @media screen and (max-width: $limit-screen) {
+             background: white;
+         }
     } 
     .section_contentSecond::-webkit-scrollbar {
-         background-image: url('../../dist/img/bcg_site.png');
+        width: 0px;
+        background-image: url('../../dist/img/bcg_site.png');
     }
     
     body {

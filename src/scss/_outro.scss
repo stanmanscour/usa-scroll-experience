@@ -1,0 +1,79 @@
+.section_eight {
+    .content {
+        .section_contentFirst {
+            width: 100%;
+            .section_bcgImage_1 img {
+                bottom: -10%;
+                left: 0;
+            }
+            .entrance_scrollAction {
+                width: 130px;
+                background: #eee;
+                font-size: 12px;
+                font-weight: 300;
+                position: absolute;
+                left: 1%;
+                top: 50%;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                span {
+                    display: inline-block;
+                    height: 3px;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                    position: absolute;
+                    width: 0px;
+                    left: 5%;
+                }
+
+                .spanWhite {
+                    background-image: url('../../dist/img/bcg_site.png');
+                }
+
+                .spanBlack {
+                    background: black;
+                }
+                p {
+                    display: inline-block;
+                    font-weight: 500;
+                    color: black;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+            .section_content {
+                position: absolute;
+                top: 20%;
+                left: 30%;
+                width: 505px;
+                h2 {
+                    font-size: 65px;
+                    font-weight: 600;
+                    text-align: left;
+                }
+                p#text1 {
+                    margin-top: 30px;
+                    line-height: 170%;
+                    span{
+                        font-weight: bold;
+                    }
+                }
+                p#text3 {
+                    margin-top: 70px;
+                    line-height: 170%;
+                }
+                .btn_twitter {
+                    margin-top: 40px;
+                    a {
+                        font-size: 13px;
+                        color: white;
+                        padding: 15px 40px;
+                        background-color: #21b3f0;
+                    }
+                }                
+            }
+        }
+    }
+}
