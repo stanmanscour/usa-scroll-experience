@@ -14,3 +14,20 @@ var scene = new ScrollMagic.Scene({ triggerElement: ".section_four .content", du
     .setTween(tweenSection4)
      // add indicators (requires plugin)
     .addTo(controller_section4);
+
+var $ww_year = $('.section_four .section_year'),
+    $ww_action = $('.section_four .section_discover');
+
+$(function() {
+
+    $ww_year.homePos = { x: $ww_year.css('left').split('px')[0], y: $ww_year.css('top').split('px')[0] };
+    $ww_action.homePos = { x: $ww_action.css('left').split('px')[0], y: $ww_action.css('top').split('px')[0] };
+
+    $('.section_four').mousemove(function(e) {
+        parallax(e, $ww_year, 40, 'left', 'top');
+
+        if (parallaxActionAuthorised) {
+            parallax(e, $ww_action, 60, 'left', 'top');
+        }
+    })
+})

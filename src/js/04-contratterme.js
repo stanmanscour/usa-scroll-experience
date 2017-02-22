@@ -101,10 +101,9 @@
         $cat_background = $('.contratATerme_background img'),
         $cat_action = $('.js-contratATerme_action');
 
-    var parallaxActionAuthorised = true;
+    parallaxActionAuthorised = true;
 
     $(function() {
-
         $cat_year.homePos = { x: $cat_year.css('left').split('px')[0], y: $cat_year.css('top').split('px')[0] };
         $cat_background.homePos = { x: $cat_background.css('left').split('px')[0], y: $cat_background.css('top').split('px')[0] };
         $cat_action.homePos = { x: $cat_action.css('left').split('px')[0], y: $cat_action.css('top').split('px')[0] };

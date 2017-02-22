@@ -15,3 +15,21 @@ var scene = new ScrollMagic.Scene({ triggerElement: ".section_five .content", du
     .setTween(tweenSection5)
      // add indicators (requires plugin)
     .addTo(controller_section5);
+
+var $university_year = $('.section_five .section_year'),
+    $university_action = $('.section_five .section_discover');
+
+
+$(function() {
+
+    $university_year.homePos = { x: $university_year.css('left').split('px')[0], y: $university_year.css('top').split('px')[0] };
+    $university_action.homePos = { x: $university_action.css('left').split('px')[0], y: $university_action.css('top').split('px')[0] };
+
+    $('.section_five').mousemove(function(e) {
+        parallax(e, $university_year, 40, 'left', 'top');
+
+        if (parallaxActionAuthorised) {
+            parallax(e, $university_action, 60, 'left', 'top');
+        }
+    })
+})

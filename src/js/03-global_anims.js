@@ -61,7 +61,7 @@ $('.section_discover').on('mouseenter', function() {
 })
 
 
-
+var parallaxActionAuthorised = true;
 var animationPlaying = false;
 
 var discoverContent = function($section, section) {
@@ -452,3 +452,5 @@ $('.section6to7').click(function() {
 //     curDown = false;
 //   });
 // })
+
+parallaxActionAuthorised = true;

@@ -19,3 +19,20 @@ var scene = new ScrollMagic.Scene({ triggerElement: ".section_seven .content", d
     .setTween(tweenSection7)
      // add indicators (requires plugin)
     .addTo(controller_section7);
+
+var $sexual_year = $('.section_seven .section_year'),
+    $sexual_action = $('.section_seven .section_discover');
+
+$(function() {
+
+    $sexual_year.homePos = { x: $sexual_year.css('left').split('px')[0], y: $sexual_year.css('top').split('px')[0] };
+    $sexual_action.homePos = { x: $sexual_action.css('left').split('px')[0], y: $sexual_action.css('top').split('px')[0] };
+
+    $('.section_seven').mousemove(function(e) {
+        parallax(e, $sexual_year, 40, 'left', 'top');
+
+        if (parallaxActionAuthorised) {
+            parallax(e, $sexual_action, 60, 'left', 'top');
+        }
+    })
+})
