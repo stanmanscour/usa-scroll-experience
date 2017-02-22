@@ -79,6 +79,7 @@ $(function() {
     $entrance_desc.homePos = { x: $entrance_desc.css('left').split('px')[0], y: $entrance_desc.css('top').split('px')[0] };
 
     $('.section_entrance').mousemove(function(e) {
+    	console.log("hey");
         parallax(e, $entrance_title, 100, 'left', 'top');
         parallax(e, $entrance_desc, 80, 'left', 'top');
     })
