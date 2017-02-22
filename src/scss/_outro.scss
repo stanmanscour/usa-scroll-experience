@@ -2,12 +2,17 @@
     .content {
         .section_contentFirst {
             width: 100%;
+            .section_bcgImage_1 {
+                opacity: 0.5;
+                    bottom: -16%;
+    left: 35%;
+            }
             .section_bcgImage_1 img {
                 bottom: -10%;
                 left: 0;
             }
             .entrance_scrollAction {
-                width: 130px;
+                width: 140px;
                 background: #eee;
                 font-size: 12px;
                 font-weight: 300;
@@ -25,7 +30,7 @@
                     margin-right: 5px;
                     position: absolute;
                     width: 0px;
-                    left: 5%;
+                    right: 0;
                 }
 
                 .spanWhite {
