@@ -70,7 +70,7 @@
 
 				p {
 					font-size: 14px;
-					font-weight: 500;
+					font-weight: 300;
 					width: 300px;
 					text-align: left;
 					line-height: 25px;
@@ -229,16 +229,6 @@
 						top: 80%;
 						left: 50%;
 						opacity: 0;
-						.content_title {
-							background-color: black;
-							color: white;
-							font-size: 32px;
-							width: 180px;
-							padding: 10px;
-							&:first-child {
-								width: 200px;
-							}
-						}
 					}
 					.section3_content2 {
 						.content_text {
