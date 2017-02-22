@@ -35,5 +35,12 @@
                 transform: scale(0.8);
             }
         }
+        .section_contentSecond {
+            overflow-y: auto;
+            height: 1200px;
+            .part3 {
+                padding-bottom: 50px;
+            }
+        }
     }
 }
