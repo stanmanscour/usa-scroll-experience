@@ -19,14 +19,17 @@ var $mafia_year = $('.section_three .section_year'),
 	$mafia_action = $('.section_three .section_discover');
 
 $(function() {
-	console.log(parallaxActionAuthorised)
+	
 	$mafia_year.homePos = { x: $mafia_year.css('left').split('px')[0], y: $mafia_year.css('top').split('px')[0] };
 	$mafia_action.homePos = { x: $mafia_action.css('left').split('px')[0], y: $mafia_action.css('top').split('px')[0] };
 
 	$('.section_three').mousemove(function(e) {
+
 		parallax(e, $mafia_year, 40, 'left', 'top');
 
-		if (parallaxActionAuthorised) {
+		let sectionOpen = $('.section_three').data('open');
+
+		if (!sectionOpen) {
 			parallax(e, $mafia_action, 60, 'left', 'top');
 		}
 	})

@@ -98,21 +98,20 @@
     };
 
     var $cat_year = $('.contratATerme_year'),
-        $cat_background = $('.contratATerme_background img'),
         $cat_action = $('.js-contratATerme_action');
 
-    parallaxActionAuthorised = true;
+
 
     $(function() {
         $cat_year.homePos = { x: $cat_year.css('left').split('px')[0], y: $cat_year.css('top').split('px')[0] };
-        $cat_background.homePos = { x: $cat_background.css('left').split('px')[0], y: $cat_background.css('top').split('px')[0] };
         $cat_action.homePos = { x: $cat_action.css('left').split('px')[0], y: $cat_action.css('top').split('px')[0] };
 
         $('.section_two').mousemove(function(e) {
-            parallax(e, $cat_background, 40, 'left', 'top');
             parallax(e, $cat_year, 40, 'left', 'top');
             
-            if (parallaxActionAuthorised) {
+            let sectionOpen = $('.section_two').data('open');
+
+            if (!sectionOpen) {
                 parallax(e, $cat_action, 60, 'left', 'top');
             }
         })

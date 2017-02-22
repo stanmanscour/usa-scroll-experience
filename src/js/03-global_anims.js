@@ -61,7 +61,6 @@ $('.section_discover').on('mouseenter', function() {
 })
 
 
-var parallaxActionAuthorised = true;
 var animationPlaying = false;
 
 var discoverContent = function($section, section) {
@@ -87,6 +86,7 @@ var discoverContent = function($section, section) {
 
         let containerWidth = $('#container').width();
         parallaxActionAuthorised = false;
+        console.log("parallaxActionAuthorised = false")
 
         let offsetLeft = $section.offset().left;
 
@@ -167,6 +167,7 @@ var discoverContent = function($section, section) {
         
 
         parallaxActionAuthorised = true;
+         console.log("parallaxActionAuthorised = true")
 
         // $sectionDiscoverAction.css('top', '53%')
 
@@ -453,4 +454,3 @@ $('.section6to7').click(function() {
 //   });
 // })
 
-parallaxActionAuthorised = true;

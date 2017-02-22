@@ -20,13 +20,20 @@ var $email_year = $('.section_six .section_year'),
 
 $(function() {
 
+
+
     $email_year.homePos = { x: $email_year.css('left').split('px')[0], y: $email_year.css('top').split('px')[0] };
     $email_action.homePos = { x: $email_action.css('left').split('px')[0], y: $email_action.css('top').split('px')[0] };
 
     $('.section_six').mousemove(function(e) {
+
+        //console.log("section_six la variable est : "+parallaxActionAuthorised)
         parallax(e, $email_year, 40, 'left', 'top');
 
-        if (parallaxActionAuthorised) {
+        let sectionOpen = $('.section_six').data('open');
+        //console.log(sectionOpen);
+
+        if (!sectionOpen) {
             parallax(e, $email_action, 60, 'left', 'top');
         }
     })

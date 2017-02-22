@@ -26,7 +26,9 @@ $(function() {
     $('.section_four').mousemove(function(e) {
         parallax(e, $ww_year, 40, 'left', 'top');
 
-        if (parallaxActionAuthorised) {
+        let sectionOpen = $('.section_four').data('open');
+
+        if (!sectionOpen) {
             parallax(e, $ww_action, 60, 'left', 'top');
         }
     })

@@ -24,6 +24,7 @@
 //})
 
 var parallaxActionAuthorised = true;
+ console.log("de base parallaxActionAuthorised = true")
 
 $(function(){
 	
@@ -78,11 +79,7 @@ $(function() {
     $entrance_desc.homePos = { x: $entrance_desc.css('left').split('px')[0], y: $entrance_desc.css('top').split('px')[0] };
 
     $('.section_entrance').mousemove(function(e) {
-    	console.log(parallaxActionAuthorised)
         parallax(e, $entrance_title, 100, 'left', 'top');
-
-        if (parallaxActionAuthorised) {
-            parallax(e, $entrance_desc, 80, 'left', 'top');
-        }
+        parallax(e, $entrance_desc, 80, 'left', 'top');
     })
 })

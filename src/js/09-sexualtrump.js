@@ -31,7 +31,9 @@ $(function() {
     $('.section_seven').mousemove(function(e) {
         parallax(e, $sexual_year, 40, 'left', 'top');
 
-        if (parallaxActionAuthorised) {
+        let sectionOpen = $('.section_seven').data('open');
+
+        if (!sectionOpen) {
             parallax(e, $sexual_action, 60, 'left', 'top');
         }
     })
