@@ -40,47 +40,6 @@
      
      .addTo(controller_section2Menu);
     
-    var controller_content2Section = new ScrollMagic.Controller();
-
-    var AnimSection2_Content1 = new TimelineMax()
-        .add([
-             TweenMax.to(".section1_img", 0.5, { opacity: 1, top: '8%'}),
-             TweenMax.to(".section1_content", 1, { opacity: 1, top: '19%' })
-        ])
-    var sceneOpacity_secondContent1 = new ScrollMagic.Scene({
-      triggerElement: ".section_two .container_secondBox",
-      triggerHook: 0.5,
-      offset: 300
-    })
-    .setTween(AnimSection2_Content1)
-    
-    .addTo(controller_content2Section);
-
-    var AnimSection2_Content2 = new TimelineMax()
-        .add([
-            TweenMax.to(".section2_img", 0.5, { opacity: 1, right: "25%"}),
-            TweenMax.to(".section2_content", 1, {opacity: 1, left: "20%"})
-        ])
-    var sceneOpacity_secondContent2 = new ScrollMagic.Scene({
-        triggerElement: ".section_two .container_secondBox",
-        offset: 600
-    })
-    .setTween(AnimSection2_Content2)
-    
-    .addTo(controller_content2Section);
-
-    var AnimSection2_Content3 = new TimelineMax()
-        .add([
-            TweenMax.to(".section3_content", 2, { opacity: 1, top: "70%"}),
-            TweenMax.to(".section3_content2>.content_text", 1, { opacity: 1})
-        ])
-    var sceneOpacity_secondContent3 = new ScrollMagic.Scene({
-        triggerElement: ".section_two .container_secondBox",
-        offset: 900
-    })
-    .setTween(AnimSection2_Content3)
-    
-    .addTo(controller_content2Section);
 
 
     /*

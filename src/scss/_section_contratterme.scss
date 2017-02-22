@@ -35,27 +35,6 @@
 				
 				left: 10%;
 			}
-
-			.section_contentSecond {
-				position: absolute;
-				bottom: -100%;
-				.container_secondBox {
-					.secondBox_section3 {
-						.section3_content {
-							.content_title {
-								background-color: black;
-								color: white;
-								font-size: 32px;
-								width: 180px;
-								padding: 10px;
-								&:first-child {
-									width: 200px;
-								}
-							}
-						}
-					}
-				}
-			}
 		}
 	}
 }

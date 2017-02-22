@@ -32,43 +32,5 @@
                 left: 25%;
             }
         }
-        .section_contentSecond {
-            .container_secondBox {
-                .secondBox_section1 {
-                    .section1_content {
-                        opacity: 1;
-                        left: 15%;
-                        top: 10%;
-                    }
-                }
-                .secondBox_section2 {
-                    .section2_content {
-                        opacity: 1;
-                        top: 20%;
-                        left: 55%;
-                    }
-                    .section2_img {
-                        opacity: 1;
-                        top: 40%;
-                        left: 40%;
-                    }
-                }
-                .secondBox_section3 {
-                    .section3_content {
-                        opacity: 1;
-                        top: 60%;
-                        left: 15%;
-                    }
-                }
-                .secondBox_section4 {
-                    .section4_content {
-                        position: absolute;
-                        top: 70%;
-                        left: 55%;
-                        text-align: right;
-                    }
-                }
-            }
-        }
     }
 }

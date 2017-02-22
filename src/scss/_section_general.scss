@@ -174,76 +174,15 @@
 			overflow-y: auto;
 			z-index: 2000;
 			.container_secondBox {
-				height: 1500px;
+				height: 100%;
+
 				
 				position: relative;
-				.secondBox_section1 {
-					.section1_img {
-						position: absolute;
-						top: 10%;
-						left: 30%;
-						width: 250px;
-						height: 330px;
-						background-image: url('../../dist/img/clinton_cover_Time.png');
-						background-repeat: no-repeat;
-						background-size: cover;
-						transition: 2s;
-						opacity: 0;
-						&:hover {
-							background-image: url('../../dist/img/clinton_cover_Timecolor.png');
-							transition: 2s;
-						}
-					}
-					.section1_content {
-						position: absolute;
-						top: 20%;
-						left: 50%;
-						text-align: left;
-						opacity: 0;
-					}
-				}
-				.secondBox_section2 {
-					.section2_img {
-						position: absolute;
-						right: 15%;
-						top: 45%;
-						opacity: 0;
-						img {
-							width: 300px;
-						}
-					}
-					.section2_content {
-						position: absolute;
-						top: 45%;
-						left: 15%;
-						text-align: right;
-						opacity: 0;
-					}
-				}
-				.secondBox_section3 {
-					.section3_img {
-
-					}
-					.section3_content {
-						position: absolute;
-						top: 80%;
-						left: 50%;
-						opacity: 0;
-					}
-					.section3_content2 {
-						.content_text {
-							position: absolute;
-							top: 80%;
-							left: 30%;
-							text-align: right;
-							width: 500px;
-							opacity: 0;
-						}
-					}
+				.secondBox_section {
 				}
 			}
 			.content_text {
-				width: 350px;
+				width: 750px;
 				height: 500px;
 				line-height: 170%;
 				font-size: 14px;
@@ -252,13 +191,6 @@
 			.content_title {
 				font-weight: bold;
 				font-size: 26px;
-			}
-			.contentSecond_box_title1, .contentSecond_box_title2, .contentSecond_box_title3 {
-				text-transform: uppercase;
-				font-size: 16pt;
-			}
-			.contentSecond_box_text1, .contentSecond_box_text2, .contentSecond_box_text3 {
-				line-height: 170%;
 			}
 		}
 	}
