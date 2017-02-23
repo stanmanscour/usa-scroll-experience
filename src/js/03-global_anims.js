@@ -11,13 +11,6 @@ $('.section_discover').on('click', function() {
 });
 
 
-var timelineActionLine = function($black, $white) {
-    let tl = new TimelineMax();
-    tl.to($black, 0.2, { width: "100%" })
-        .to($white, 0.4, { width: "100%" }, "=+0.1")
-        .to($black, 0, { width: "0%" })
-        .to($white, 0, { width: "0%" })
-}
 
 
 
