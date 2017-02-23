@@ -148,10 +148,12 @@ body {
 }
 
 .bigTitle {
-    font-size: 61px;
     font-weight: 600;
     color: black;
-    font-family: 'Roboto';
+    font-family: 'lora';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 36px;
 }
 
 .actionWhiteLine {
