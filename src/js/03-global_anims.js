@@ -86,7 +86,7 @@ var discoverContent = function($section, section) {
 
         let containerWidth = $('#container').width();
         parallaxActionAuthorised = false;
-        console.log("parallaxActionAuthorised = false")
+       //console.log("parallaxActionAuthorised = false")
 
         let offsetLeft = $section.offset().left;
 

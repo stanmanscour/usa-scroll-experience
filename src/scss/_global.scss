@@ -136,6 +136,7 @@ body {
         color: #010101;
         line-height: 19px;
         font-weight: 600;
+        font-family: lora;
     }
 }
 
@@ -149,11 +150,11 @@ body {
 
 .bigTitle {
     font-weight: 600;
-    color: black;
-    font-family: 'lora';
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 36px;
+    color: #000;
+    font-family: lora;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 4px; */
+    font-size: 45px;
 }
 
 .actionWhiteLine {
@@ -196,7 +197,7 @@ body {
     .logotext {
         font-size: 15px;
         color: #000;
-        font-family: 'Roboto';
+        font-family: lora;
         font-weight: 600;
     }
 }
