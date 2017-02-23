@@ -38,6 +38,10 @@ $(window).load(function() {
     // $(".loader-container").fadeOut("1000");
 })
 
+$(document).ready(function() {
+  $(".js-unveil").unveil();
+});
+
 var scrollAllowed = true;
 
 function toggleScrollX() {
