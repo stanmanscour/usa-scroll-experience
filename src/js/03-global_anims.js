@@ -11,6 +11,13 @@ $('.section_discover').on('click', function() {
 });
 
 
+var timelineActionLine = function($black, $white) {
+    let tl = new TimelineMax();
+    tl.to($black, 0.2, { width: "100%" })
+        .to($white, 0.4, { width: "100%" }, "=+0.1")
+        .to($black, 0, { width: "0%" })
+        .to($white, 0, { width: "0%" })
+}
 
 
 
@@ -58,7 +65,6 @@ var discoverContent = function($section, section) {
 
         let containerWidth = $('#container').width();
         parallaxActionAuthorised = false;
-       //console.log("parallaxActionAuthorised = false")
 
         let offsetLeft = $section.offset().left;
 
@@ -76,7 +82,8 @@ var discoverContent = function($section, section) {
                 var $sectionIntro = $('.js-section-' + section + ' .section_text');
                 var $sectionFunctionality = $('.js-section-' + section + ' .section_mainFunctionality');
                 var $sectionNextBtn = $('.js-section-' + section + ' .section_next');
-
+                var $globalLogo =  $('.menu-header-logo-container');
+                
 
                 timelineGlobalAnim = new TimelineMax();
 
@@ -88,12 +95,11 @@ var discoverContent = function($section, section) {
                     .to($sectionFunctionality, 1, { top: "15%", opacity: "0", ease: Power1.easeInOut }, "hideTrump+=0.55")
                     .to($sectionContent, 2, { top: "10%", ease: Power1.easeInOut })
                     .to($sectionNextBtn, 2, { top: "76%", opacity: "0", ease: Power1.easeInOut }, "hideTrump")
+                    .to($globalLogo, 1, {opacity: "0"}, "hideTrump+=0.25")
 
                     if ($sectionTitle2 !== 'undefined'){
                         timelineGlobalAnim.to($sectionTitle2, 1, { top: "15%", opacity: "0", ease: Power1.easeInOut }, "hideTrump+=0.35")
                     }
-
-                //$sectionDiscoverAction.css('top', '5%');
 
                 var changeDiscoverText = function(){
                         $sectionDiscoverAction.find('.upperText').text('go Back');
@@ -120,12 +126,6 @@ var discoverContent = function($section, section) {
                         opacity: 1
                     })
 
-                   
-                
-
-                // $('.js-contratATerme_action .upperText').html('Close');
-                // $('.js-contratATerme_action .simpleText').html('Go to the timeline');
-
                 animationPlaying = false;
 
             });
@@ -136,16 +136,7 @@ var discoverContent = function($section, section) {
     } else { // ouvert
 
         timelineGlobalAnim.reverse();
-        
-
         parallaxActionAuthorised = true;
-         console.log("parallaxActionAuthorised = true")
-
-        // $sectionDiscoverAction.css('top', '53%')
-
-        
-        
-
         TimelineDiscoverAction.reverse();
 
         animationPlaying = false;
