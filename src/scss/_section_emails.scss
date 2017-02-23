@@ -1,6 +1,17 @@
 .section_six {
     .content {
         .section_contentFirst {
+
+            .section_title {
+                position: absolute;
+                top: 19%;
+            }
+            .section_title2{
+                position: absolute;
+                top: 27%;
+                left: 35%;
+            }
+
             .section_mainImage img {
                 bottom: -25%;
                 width: 50%;

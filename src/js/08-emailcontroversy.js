@@ -6,6 +6,7 @@ var tweenSection6 = new TimelineMax()
         TweenMax.to(".section_six>.content .section_mainImage>img", 1, { left: '0.2%', bottom: "-15%" }),
         TweenMax.to(".section_six>.content .section_bcgImage_1", 1, { left: '0%' }),
         TweenMax.to(".section_six>.content .section_title", 1, { left: '45%' }),
+        TweenMax.to(".section_six>.content .section_title2", 1, { left: '50%' }),
         TweenMax.to(".section_six>.content .section_text", 1, { left: '53%' })
     ]);
 
