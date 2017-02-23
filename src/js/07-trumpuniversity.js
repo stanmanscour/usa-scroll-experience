@@ -3,7 +3,7 @@ var controller_section5 = new ScrollMagic.Controller({ vertical: false });
 var tweenSection5 = new TimelineMax()
     .add([
         // TweenMax.to(".section-two .section_bcgImage_flag>img", 1, {left: "-30"}),
-        TweenMax.to(".section_five>.content .section_mainImage>img", 1, { left: '5%', bottom: '-25%' }),
+        TweenMax.to(".section_five>.content .section_mainImage>img", 1, { left: '0%', bottom: '-25%' }),
         TweenMax.to(".section_five>.content .section_bcgImage_1", 1, { left: '35%' }),
         TweenMax.to(".section_five>.content .section_title", 1, { left: '50%' }),
         TweenMax.to(".section_five>.content .section_title2", 1, { left: '51%' }),
