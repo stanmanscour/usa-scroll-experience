@@ -23,6 +23,9 @@
         }
         .section_contentSecond {
             overflow-y: auto;
+            .container_secondBox {
+                height: 120%;
+            }
         }
     }
 }
