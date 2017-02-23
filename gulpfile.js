@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
+    imageop = require('gulp-image-optimization'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
@@ -37,11 +38,13 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('dist/css/'))
 });
 
-gulp.task('images', function(){
-    return gulp.src('src/img/*')
-    .pipe(imagemin({progressive: true}))
-    .pipe(gulp.dest('dist/img/'));
-})
+gulp.task('images', function(cb) {
+    gulp.src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest('dist/images/')).on('end', cb).on('error', cb);
+});
 
 gulp.task('assets', function(){
     return gulp.src([
