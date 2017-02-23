@@ -12,7 +12,7 @@ var openMenu = function(){
   
   if ($menu.data('open') === 1){ // ouvert
     
-    var tween3 = TweenMax.to($menu, 1, {css: {zIndex: "100"}})
+    var tween3 = TweenMax.to($menu, 1, {css: {zIndex: "-100"}})
     var tweenMenu = TweenMax.to($menuML, 1, {left: "-260px"})
     var tweenShadow = TweenMax.to($hideScreen, 2, {opacity: 0, ease: Power1.easeInOut})
     $menu.data('open', 0);
