@@ -19,27 +19,6 @@ var timelineActionLine = function($black, $white) {
         .to($white, 0, { width: "0%" })
 }
 
-var animLogo = true;
-
-$('.menu-header-logo-container').on('click', function() {
-    $('.menu-header-nav-container').toggle();
-
-    if ($('.menu-header-nav-container').css('display') !== 'none') {
-        animLogo = false;
-    } else {
-        animLogo = true;
-    }
-})
-
-$('.menu-header-logo-container').on('mouseenter', function() {
-    let $black = $(this).find('.actionBlackLine');
-    let $white = $(this).find('.actionWhiteLine');
-
-    if (animLogo) {
-        timelineActionLine($black, $white);
-    }
-
-})
 
 
 
