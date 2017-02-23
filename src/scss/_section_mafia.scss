@@ -37,7 +37,9 @@
         }
         .section_contentSecond {
             overflow-y: auto;
-            height: 1200px;
+            .container_secondBox {
+                height: 130%;
+            }   
             .part3 {
                 padding-bottom: 50px;
             }
