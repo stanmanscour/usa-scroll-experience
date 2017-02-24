@@ -1,3 +1,5 @@
+console.log("Les informations apparaissent à ceux qui savent chercher.");
+
 $(window).load(function() {
 
     var body = $("html, body");
